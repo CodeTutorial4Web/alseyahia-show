@@ -1,0 +1,18 @@
+@import url(main.css);
+
+
+
+.communityNavbar { 
+
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--navbar-bg);
+    display: flex;
+  
+    gap: 1rem;
+    padding: 1rem;
+    transition: var(--basic-transition);
+    z-index: 9;
+ }

@@ -1,0 +1,131 @@
+@import url(main.css);
+
+
+
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+
+.form .form__group {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 2rem;
+}
+
+.form .form__group.col {
+    flex-direction: column;
+    gap: .1rem;
+}
+
+.form .form__group input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: "Noto Sans Arabic", sans-serif;
+    outline: none;
+    transition: var(--basic-transition);
+    border: 1px solid transparent;
+}
+
+.form .form__group select {
+    padding: 1rem;
+    border-radius: .5rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: "Noto Sans Arabic", sans-serif;
+    outline: none;
+    transition: var(--basic-transition);
+    border: 1px solid transparent;
+}
+
+.form .form__group input:focus {
+    border-color: var(--main-color);
+}
+
+.form__group__btn {
+    padding: .2rem 1.5rem;
+    border-radius: .5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--basic-transition);
+    color: var(--text-color);
+    border: 2px solid var(--main-color);
+    background: transparent;
+    width: max-content;
+    position: relative;
+    overflow: hidden;
+}
+
+.form__group__btn:hover {
+    background: var(--main-color);
+    color: #f1f1f1;
+}
+
+.form__group p a {
+    margin-right: .2rem;
+    color: var(--main-color);
+}
+
+.form__group p a:hover {
+    text-decoration: underline;
+}
+
+.form__group .phoneNumber {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.form__group .phoneNumber input {
+
+    background: none;
+    width: calc(100% - 3rem);
+
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form__group .phoneNumber p {
+    padding: 2rem;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #fdf7f7;
+    padding: 0;
+    box-shadow: .00001rem 0 3rem #30303041;
+}
+
+.form .phoneNumber input:focus {
+    border-color: var(--main-color);
+}
+

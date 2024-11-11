@@ -1,0 +1,108 @@
+@import url(main.css);
+
+.navbar {
+    direction: ltr;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    padding: .2rem 3rem;
+}
+
+.navbar .logo {
+    color: var(--text-color);
+}
+
+.navbar .logo img {
+    width: 3rem;
+}
+
+.navbar ul {
+    position: absolute;
+    top: 100%;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    right: -100%;
+    transition: var(--medium-transition);
+    padding: 1rem 2rem;
+
+    list-style: none;
+}
+
+.navbar .burger {
+    display: flex;
+}
+
+.navbar ul::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: -1;
+    transition: var(--medium-transition);
+}
+
+.navbar ul li {
+    text-align: end;
+}
+
+.navbar ul li a {
+    padding: 0 1.1rem;
+    color: #1f1f1f;
+    transition: var(--medium-transition);
+    font-weight: 700;
+    border-radius: .3rem;
+    font-size: 1.5rem;
+    font-family: "Noto Sans Arabic",  sans-serif;
+
+}
+
+.navbar ul li a:hover {
+    box-shadow: 0 0 0 2px rgba(39, 39, 39, 0.123);
+
+}
+
+.navbar .burger {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    border-radius: 50%;
+    gap: 5px;
+    display: flex;
+}
+
+.navbar .burger .line1,
+.navbar .burger .line2 {
+    background: var(--text-color);
+    width: 30px;
+    height: 2px;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.navbar.open .burger .line2 {
+    width: 15px;
+}
+
+.navbar.open ul {
+    right: 0;
+}
+
+.navbar.open ul::after {
+    left: 0;
+}
+
