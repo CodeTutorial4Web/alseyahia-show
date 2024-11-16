@@ -10,204 +10,440 @@
 }
 
 
-.dashboardSection {
-    width: 100%;
+
+.communitySection {
     padding: 2rem;
+    direction: ltr;
+    width: 100%;
+}
 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    height: 100vh;
-    gap: 2rem;
+.communitySection .community {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.communitySection .community .createPost {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
 
 }
 
-.dashboardSection .communityActivityData {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    grid-column: 1 / 5;
+.communitySection .community .createPost span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    color: var(--text-color);
+    transition: var(--basic-transition);
+    font-weight: 700;
 }
 
-.dashboardSection .communityActivityData .communityActivityData__item {
-    border-right: 1px solid var(--thumb-bg);
-}
-
-.dashboardSection .communityActivityData .communityActivityData__item:nth-last-child(1) {
-    border: none;
-}
-
-
-.dashboardSection .communityActivityData .communityActivityData__item__title,
-.dashboardSection .videosWatched .videosWatched__title,
-.dashboardSection .notifications .notifications__title,
-.dashboardSection .badges .badges__title,
-.dashboardSection .pointsLeaderboard .pointsLeaderboard__title {
-    font-size: .8rem;
-    font-weight: 500;
+.communitySection .community .createPost:hover span {
     color: var(--main-color);
-    margin-bottom: .5rem;
 }
 
-.communityActivityData__item b,
-.dashboardSection .videosWatched b,
-.dashboardSection .notifications b,
-.dashboardSection .badges b {
-    
-    font-size: 5rem;
+.communitySection .community .postsGrid {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+    margin-top: 1rem;
 }
 
-.dashboardSection .videosWatched b span{ 
-    font-size: .7rem;
-    font-weight: 500;
-}
-
-
-.dashboardSection > * {
+.communitySection .community .postsGrid .postsGrid__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
     background: var(--card-bg);
+    border-radius: .5rem;
+    padding: 1.5rem;
+    position: relative;
+}
+
+.communitySection .community .postsGrid .postsGrid__item .showMore {
+    color: #dfdfdf;
+    cursor: pointer;
+    transition: var(--basic-transition);
+}
+
+.communitySection .community .postsGrid .postsGrid__item .showMore:hover {
+    color: var(--text-color);
+}
+
+.communitySection .community .postsGrid .postsGrid__item .dropdown {
+    position: absolute;
+    top: 3rem;
+    right: -6rem;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    background: #222;
+    border-radius: .5rem;
+    height: 0;
+    overflow: hidden;
+    transition: var(--basic-transition);
+}
+
+.communitySection .community .postsGrid .postsGrid__item .dropdown span {
+    padding: .5rem 1rem;
+    padding-right: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .2rem;
+    cursor: pointer;
+    transition: var(--basic-transition);
+}
+
+.communitySection .community .postsGrid .postsGrid__item .dropdown .share:hover {
+
+    color: rgb(108, 172, 255);
+}
+
+
+.communitySection .community .postsGrid .postsGrid__item .dropdown .delete:hover {
+    color: rgb(255, 108, 108);
+
+}
+
+.communitySection .community .postsGrid .postsGrid__item .dropdown .edit:hover {
+
+    color: rgb(255, 204, 108);
+}
+
+.communitySection .community .postsGrid .postsGrid__item .dropdown .copy:hover {
+
+    color: rgb(108, 118, 255);
+}
+
+.communitySection .community .postsGrid .postsGrid__item .dropdown.show {
+    height: 10rem;
+    transition: var(--basic-transition);
+
+}
+
+
+.communitySection .community .postsGrid .postsGrid__item .userData__date {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+    margin-bottom: 1rem;
+
+}
+
+.communitySection .community .postsGrid .postsGrid__item .userData__date b {
+    font-size: .8rem;
+}
+
+
+.communitySection .community .postsGrid .postsGrid__item .postsGrid__item__menuBtn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    cursor: pointer;
+}
+
+.communitySection .community .postsGrid .postsGrid__item .postsGrid__item__userData {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: .5rem;
+    background: var(--bg-color);
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+.communitySection .community .postsGrid .postsGrid__item .postsGrid__item__userData .userName {
+    display: flex;
+    flex-direction: column;
+}
+
+.communitySection .community .postsGrid .postsGrid__item .postsGrid__item__userData p {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.communitySection .community .postsGrid .postsGrid__item .postsGrid__item__userData ul {
+    font-size: .8rem;
+    color: var(--gray-color);
+    display: flex;
+    gap: 1.8rem;
+}
+
+.communitySection .community .postsGrid .postsGrid__item .postsGrid__item__userData li:nth-child(1) {
+    list-style: none;
+}
+
+.communitySection .community .postsGrid .postsGrid__item .postsGrid__item__content h3 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: .2rem;
+}
+
+.communitySection .community .postsGrid .postsGrid__item .postsGrid__item__content p {
+    font-size: .9rem;
+    color: var(--gray-color);
+}
+
+.communitySection .community .postsGrid .postsGrid__item .postsGrid__item__image.fullScreen {
+    margin: 0;
+    border-radius: 0;
+
+}
+
+
+.communitySection .community .postsGrid .postsGrid__item .postsGrid__item__image {
+    height: 50vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background: var(--bg-color);
+    border-radius: .5rem;
+    margin-top: 1rem;
+}
+
+
+
+.communitySection .community .postsGrid .postsGrid__item .postsGrid__item__image button {
+    background: var(--card-bg);
+    border: 1px solid transparent;
+    border-radius: .5rem;
+    color: var(--main-color);
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    opacity: 0;
+    transition: var(--basic-transition);
+}
+
+.communitySection .community .postsGrid .postsGrid__item .postsGrid__item__image:hover button {
+    opacity: 1;
+}
+
+
+
+.communitySection .community .postsGrid .postsGrid__item .postsGrid__item__controlls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.communitySection .community .postsGrid .postsGrid__item .postsGrid__item__controlls div {
+    display: flex;
+    gap: 1rem;
+}
+
+
+.communitySection .community .postsGrid .postsGrid__item .postsGrid__item__controlls button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+    ;
+    font-size: 1.2rem;
+    transition: var(--basic-transition);
+}
+
+.communitySection .community .postsGrid .postsGrid__item .postsGrid__item__controlls button:hover {
+    color: var(--text-color);
+}
+
+.communitySection .community .postsGrid .postsGrid__item .postsGrid__item__controlls .likesComments {
+    font-size: .8rem;
+}
+
+
+/* Comments */
+
+.postsGrid__item__comments {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: var(--basic-transition);
+    
+}
+
+.postsGrid__item__comments.show {
+    margin-top: 3rem;
+
+    height: 65.889vh;
+}
+
+.postsGrid__item__comments .createComment {
+    display: flex;
+    width: 100%;
+    gap: .5rem;
+    background: var(--bg-color);
     padding: 1rem;
     border-radius: .5rem;
 }
 
-.dashboardSection .videosWatched {
-    grid-column: 1 / 1;
-    grid-row: 3 / 4;
+.commentsGrid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 2rem;
+    gap: 2rem;
+    max-height: 50vh;
+    padding: 0 1rem 2rem 0;
+    overflow-y: scroll;
+}
+
+.postsGrid__item__comments .createComment>div {
+    margin-right: 1rem;
+}
+
+.postsGrid__item__comments .createComment input {
+    width: 85%;
+    padding: .5rem 1rem;
+    background: var(--card-bg);
+    border-radius: .5rem;
+    border: 1px solid transparent;
+    outline: none;
+    color: var(--text-color);
+    transition: var(--basic-transition);
+}
+
+.postsGrid__item__comments .createComment button {
+    width: 10%;
+    border-radius: .5rem;
+    border: none;
+    background: var(--card-bg);
+    padding: .5rem 1rem;
+    color: var(--text-color);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: var(--basic-transition);
+}
+
+
+.postsGrid__item__comments .createComment button:hover {
+    border-color: var(--main-color);
+}
+
+.postsGrid__item__comments .createComment input::placeholder {
+    font-family: "Mulish", sans-serif;
+}
+
+.postsGrid__item__comments .createComment input:focus {
+    border-color: var(--main-color);
 
 }
 
-.dashboardSection .notifications {
-    grid-column: 2 / 2;
-    background: #fff;
-    grid-row: 3 / 4;
-    color: var(--main-color);
+.postsGrid__item__comments .commentCard {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
+
+.postsGrid__item__comments .commentCard .userData {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.postsGrid__item__comments .commentCard .userData span {
+    font-weight: 900;
+}
+
+.postsGrid__item__comments .commentCard p {
+    font-size: .8rem;
+    color: var(--gray-color);
+    margin-top: .3rem;
+}
+
+.postsGrid__item__comments .commentCard .commentsControlls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.postsGrid__item__comments .commentCard .commentsControlls div {
+    display: flex;
+    gap: 1rem;
+}
+
+.postsGrid__item__comments .commentCard .commentsControlls button {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-}
-
-
-.dashboardSection .pointsLeaderboard {
-    grid-column: 3 / 5;
-    grid-row: 2 / 4;
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    flex-direction: column;
-}
-
-.dashboardSection .pointsLeaderboard div{
-    width: 100%;
-}
-
-.dashboardSection .pointsLeaderboard b {
-    font-size: 2rem;
-
-}
-.dashboardSection .pointsLeaderboard canvas {
-    width: 100% !important;
-   
-}
-.dashboardSection .badges {
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
-}
-
-.dashboardSection .badges .badges__grid {
-    display: grid;
-    grid-auto-columns: 20%;
-    grid-auto-flow: column;
-    overflow-x: scroll;
-    gap: 1rem;
-    width: 100%;
-    padding-bottom: 1rem;
-    scroll-snap-type: inline mandatory;
-
-}
-
-
-.dashboardSection .badges .badges__grid::-webkit-scrollbar {
-    height: 5px;
-}
-
-
-.dashboardSection .badges .badges__grid::-webkit-scrollbar-thumb {
     background: none;
-}
-
-.dashboardSection .badges .badges__grid:hover::-webkit-scrollbar-thumb {
-    background: var(--thumb-bg);
-
-}
-
-.dashboardSection .badges .badges__grid .badges__grid__item img {
-    width: 100%;
-}
-
-.dashboardSection .badges .badges__grid .badges__grid__item p {
-    text-align: center;
-    font-size: .7rem;
-    font-weight: 500;
-    margin-top: .5rem;
-}
-
-
-.videosSection {
-    width: 100%;
-    padding: 0 2rem;
-
-}
-
-.videosSection .blog__grid {
-    margin-top: 2rem;
-    gap: 2rem;
-    padding-bottom: 3rem;
-}
-
-.videoThumbnail {
-    height: 11rem;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    border-radius: .5rem;
-    margin-bottom: .5rem;
-}
-
-
-.videoUserData {
-    display: flex;
-    gap: 1rem;
-    align-items: start;
-    margin-top: .5rem;
-}
-
-
-.videoCard>a {
+    border: none;
+    cursor: pointer;
+    color: #555;
+    ;
     font-size: 1.2rem;
-    font-weight: 800;
-    margin-bottom: .7rem;
+    transition: var(--basic-transition);
+}
+
+.postsGrid__item__comments .commentCard .commentsControlls button:hover {
+
     color: var(--text-color);
-}
-
-
-.videoViews__date__owner {
-    display: flex;
-    flex-direction: column;
-}
-
-.videoViews__date__owner h4 {
-    font-size: 1rem;
 
 }
 
-.videoViews__date {
-    display: flex;
-
-    gap: 1.8rem;
+.postsGrid__item__comments .commentCard .commentsControlls span {
     font-size: .8rem;
-    font-weight: 600;
 }
 
-.videoViews__date li:nth-child(1) {
-    list-style: none;
+
+.postsGrid__item__comments .commentCard .repliesBtn {
+    cursor: pointer;
+}
+
+.postsGrid__item__comments .commentCard.reply {
+    margin-left: 3rem;
+}
+
+.commentsGrid.reply {
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    border-left: 1px solid var(--bg-color);
+    transition: var(--basic-transition);
+}
+
+
+
+.commentsGrid.reply.show {
+    height: 70vh;
+    padding: 1rem 1rem 2rem 0  ;
+    padding-bottom: 3rem;
+    overflow-y: scroll;
+
 }

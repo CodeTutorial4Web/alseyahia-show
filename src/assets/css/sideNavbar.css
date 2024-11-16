@@ -30,8 +30,11 @@
     justify-content: start;
     align-items: start;
     gap: 1rem;
-    border-bottom: 1px solid var(--gray-color);
+    background: #222;
     padding: 1rem;
+    margin: .7rem .7rem 0 .7rem;
+    border-radius: .5rem;
+    color: var(--text-color);
 }
 
 
@@ -58,25 +61,60 @@
     color: var(--gray-color);
     text-decoration: none;
     font-weight: 700;
-    padding: 0 1rem;
+    padding: 0 .7rem;
     margin-top: 1rem;
 }
 
-.sideNavbar .videosLinks {
+.sideNavbar .otherLinks {
     display: flex;
     flex-direction: column;
+    padding: 0 .7rem;
     gap: .5rem;
-    margin-top: 1rem;
+    width: 100%;
 }
 
-.sideNavbar .sideNavbarLinks > a {
-    padding: .5rem 1rem;
+.sideNavbar .sideNavbarLinks .navLink {
+    padding: 1rem;
     color: var(--text-color);
     font-weight: 900;
+    background: var(--card-bg);
+    
+    position: relative;
+    padding-left: .7rem;
+    border-radius: .5rem;
+    overflow: hidden;
 }
 
+.sideNavbar .sideNavbarLinks .navLink span{
+    z-index: 9999999999;
+    position: relative;
+
+    transition: var(--basic-transition);
+
+}
+.sideNavbar .sideNavbarLinks  .navLink > div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: .3rem;
+    background: var(--main-color);
+    z-index: 1;
+    transition: var(--basic-transition);
+}
+
+.sideNavbar .sideNavbarLinks .navLink:hover > div {
+    width: 100%;
+}
+
+.sideNavbar .sideNavbarLinks .navLink:hover span {
+    color: var(--navbar-bg);
+}
+
+
+
 .communityDropdown h3 {
-    padding: 1rem;
+    padding: 1rem .7rem;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid rgb(236, 236, 236);
@@ -124,7 +162,7 @@
     justify-content: start;
     align-items: start;
     gap: .3rem;
-    padding: 0 1rem;
+    padding: 0 .7rem;
 }
 
 .conversationPreview p {

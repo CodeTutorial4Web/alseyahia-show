@@ -70,11 +70,11 @@ export default function CommunityPreview({ communityGrade, communityChannels }) 
       </h3>
 
       <ul className={show ? "communityMenu show" : "communityMenu"}>
-        <li><Link to="/community/12/channel/12"><span>🌐</span>General</Link></li>
-        <li><Link to="/community/12/channel/12"><span>🎓</span>Students</Link></li>
-        <li><Link to="/community/12/channel/12"><span>📢</span>Announcements</Link></li>
-        <li><Link to="/community/12/channel/12"><span>📁</span>Files</Link></li>
-        <li><Link to="/community/12/channel/12"><span>🤔</span>Ask Community</Link></li>
+        <li><Link to="/community/12/general"><span>🌐</span>General</Link></li>
+        <li><Link to="/community/12/students"><span>🎓</span>Students</Link></li>
+        <li><Link to="/community/12/announcements"><span>📢</span>Announcements</Link></li>
+        <li><Link to="/community/12/files"><span>📁</span>Files</Link></li>
+        <li><Link to="/community/12/ask-community"><span>🤔</span>Ask Community</Link></li>
       </ul>
     </div>
   );

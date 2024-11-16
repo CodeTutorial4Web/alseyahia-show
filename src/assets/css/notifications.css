@@ -1,0 +1,70 @@
+@import url(main.css);
+
+.notificationsSection {
+    width: 100%;
+    padding: 2rem;
+    
+}
+
+.notificationsSection .notificationsContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3rem;
+    margin-top: 2rem;
+
+}
+
+.notificationsSection .notificationsContainer .notificationItem{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: .5rem;
+    position: relative;
+}
+
+
+.notificationsSection .notificationsContainer .notificationItem__title{
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--main-color);
+    margin-bottom: .5rem;
+}
+
+.notificationsSection .notificationsContainer .notificationItem__content{
+    color: var(--gray-color);
+    font-size: .9rem;
+    margin-top: .2rem;
+}
+
+.notificationsSection .notificationsContainer .notificationItem__controlls {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.notificationsSection .notificationsContainer .notificationItem__controlls button{
+    background: none;
+    border: none;
+    color: var(--gray-color);
+    cursor: pointer;
+    transition: var(--basic-transition);
+    font-size: 1.5rem;
+}
+
+.notificationsSection .notificationsContainer .notificationItem__controlls button.buttonRead:hover {
+    color: rgb(108, 255, 128);
+}
+
+
+.notificationsSection .notificationsContainer .notificationItem__controlls button.buttonTrash:hover {
+    color: rgb(255, 108, 108);
+}
+
+.notificationsSection .notificationsContainer .notificationItem__controlls button.buttonBookmark:hover {
+    color: rgb(108, 172, 255);
+}

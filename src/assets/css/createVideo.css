@@ -1,0 +1,266 @@
+@import url(main.css);
+
+
+.createVideoPage {
+    direction: ltr;
+    padding: 2rem;
+}
+
+.createVideoPage form {
+    display: flex;
+    width: 100%;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.createVideoPage form .formFirstPart {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.createVideoPage form .formSecondPart {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+
+.createVideoPage .formGroup {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.createVideoPage .uploadVideoGroup {
+    height: 55vh;
+    background: var(--card-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: var(--basic-transition);
+    overflow: hidden;
+}
+
+.createVideoPage .uploadVideoGroup:hover {
+    border-color: var(--main-color);
+}
+
+.createVideoPage .uploadVideoGroup label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 7rem;
+    cursor: pointer;
+    color: var(--gray-color);
+}
+
+.createVideoPage .uploadVideoGroup label span {
+    font-size: 1rem;
+    color: var(--main-color);
+}
+
+
+.createVideoPage .uploadVideoGroup input {
+    display: none;
+}
+
+.createVideoPage .uploadVideoGroup video {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.createVideoPage .uploadVideoGroup video span {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.createVideoPage .formGroup .regInput {
+    padding: 1rem;
+    background: var(--card-bg);
+    border-radius: .5rem;
+    border: 1px solid transparent;
+    outline: none;
+    color: var(--text-color);
+    transition: var(--basic-transition);
+    margin-top: .2rem;
+}
+
+.createVideoPage .formGroup .regInput::placeholder {
+    font-family: "Mulish", sans-serif;
+}
+
+
+
+.createVideoPage .formGroup .regInput:focus {
+    border-color: var(--main-color);
+
+}
+
+.createVideoPage .formGroup textarea.regInput {
+    height: 30vh;
+    resize: none;
+    overflow-y: scroll;
+}
+
+.createVideoPage .formGroup textarea.regInput::-webkit-scrollbar-thumb {
+    cursor: auto;
+}
+
+.createVideoPage form .formSecondPart .chooseQuizType .quizTypes {
+    margin: .7rem 0 2rem 0;
+
+}
+
+.createVideoPage form .formSecondPart .enableQuiz {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--gray-color);
+    transition: var(--basic-transition);
+    cursor: pointer;
+}
+
+.createVideoPage form .formSecondPart.enable>button {
+    color: var(--main-color);
+
+}
+
+.createVideoPage form .formSecondPart.enable .enableQuiz {
+    color: var(--main-color);
+
+}
+
+
+.createVideoPage form .formSecondPart .enableQuiz:hover {
+
+    color: var(--main-color);
+}
+
+.createVideoPage form .formSecondPart .chooseQuizType .quizTypes span {
+    pointer-events: none;
+    color: var(--gray-color);
+    padding: .4rem 1rem;
+    background: var(--card-bg);
+    border-radius: .5rem;
+    transition: var(--basic-transition);
+    font-weight: 700;
+    border: 1px solid transparent;
+}
+
+.createVideoPage form .formSecondPart .chooseQuizType label {
+    color: var(--gray-color);
+
+
+}
+
+.createVideoPage form .formSecondPart.enable .chooseQuizType label {
+    color: var(--text-color);
+
+}
+
+.createVideoPage form .formSecondPart.enable .chooseQuizType .quizTypes span {
+    color: var(--text-color);
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.createVideoPage form .formSecondPart.enable .chooseQuizType span.active {
+    border-color: var(--main-color);
+}
+
+
+.createVideoPage form .formSecondPart .chooseQuizType .quizTypes span:hover {
+    color: var(--main-color);
+
+}
+
+.createVideoPage form .formSecondPart .chooseQuizType .quizTypes span:nth-last-child(1) {
+    margin-left: 1rem;
+}
+
+.createVideoPage form .formSecondPart .chooseQuizType .quizTypeChoose .upperPhase {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    font-size: .9rem;
+    width: 100%;
+}
+
+.createVideoPage form .formSecondPart .chooseQuizType .quizTypeChoose .upperPhase button {
+    background: none;
+    border: none;
+    font-weight: 700;
+    font-size: .7rem;
+    color: var(--gray-color);
+    background: var(--card-bg);
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    transition: var(--basic-transition);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+}
+
+.createVideoPage form .formSecondPart .chooseQuizType .quizTypeChoose .questions {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 2rem;
+}
+
+
+.createVideoPage form .formSecondPart .chooseQuizType .quizTypeChoose .questions .questions__item .question {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.createVideoPage form .formSecondPart .chooseQuizType .quizTypeChoose .questions .questions__item {
+    display: flex;
+    flex-direction: column;
+    background: var(--card-bg);
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+.createVideoPage form .formSecondPart .chooseQuizType .quizTypeChoose .questions .questions__item .answers ol {
+    padding-left: 1rem;
+    display: flex;
+    justify-content: start;
+    align-items: stretch;
+    flex-direction: column;
+    gap: .5rem;
+    list-style: georgian;
+
+}
+
+.createVideoPage form .formSecondPart .chooseQuizType .quizTypeChoose .questions .questions__item .answers ol li {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    font-size: .9rem;
+}
+
+.createVideoPage form .formSecondPart .chooseQuizType .quizTypeChoose .questions .questions__item .answers ol li b {
+    font-style: normal;
+    font-size: 1rem;
+}

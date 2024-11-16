@@ -1,0 +1,142 @@
+@import url(main.css);
+
+
+.shopSection {
+    width: 100%;
+    padding: 2rem;
+    position: relative;
+}
+
+.shopSection .blog__grid {
+    width: 100%;
+    margin-top: 2rem;
+    gap: 3rem;
+}
+
+.userPoints {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: .5rem 1rem;
+    background: var(--card-bg);
+    border-radius: .5rem;
+}
+
+.topShopNavbar {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.userCart {
+ font-size: 2rem;
+    position: relative;
+}
+
+.userCart span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: .6rem;
+    background: var(--main-color);
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--bg-color);
+}
+
+.userPoints p {
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+.shopSection .blog__grid .shopItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.shopSection .blog__grid .shopItem a {
+    color: var(--text-color);
+}
+
+
+.shopSection .blog__grid .shopItem .menu{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.shopSection .blog__grid .shopItem .menu .dots {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: var(--basic-transition);
+    font-size: 1.5rem;
+}
+
+.shopSection .blog__grid .shopItem .shopItem__content .shopItem__title {
+    font-size: 1.1rem;
+}
+
+.shopSection .blog__grid .shopItem .shopItem__content .shopItem__desc {
+    font-size: .8rem;
+    color: var(--gray-color);
+}
+
+
+.shopSection .blog__grid .shopItem .shopItem__image{
+    min-height: 40vh;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    margin-bottom: .3rem;
+    border-radius: .5rem;
+}
+
+.shopSection .blog__grid .shopItem .shopItem__content .shopItem__priceAddToCart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.shopSection .blog__grid .shopItem .shopItem__content .shopItem__priceAddToCart span i {
+    font-style: normal;
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+
+.shopSection .blog__grid .shopItem .shopItem__content .shopItem__priceAddToCart button {
+    background: none;
+    border: none;
+    color: var(--gray-color);
+    cursor: pointer;
+    transition: var(--basic-transition);
+    font-size: 1.5rem;
+}
+
+.shopSection .blog__grid .shopItem .shopItem__content .shopItem__priceAddToCart button:hover {
+        color: rgb(108, 172, 255);
+    
+}
