@@ -78,9 +78,8 @@
     color: var(--text-color);
     font-weight: 900;
     background: var(--card-bg);
-    
+    width: 100%;
     position: relative;
-    padding-left: .7rem;
     border-radius: .5rem;
     overflow: hidden;
 }
@@ -162,7 +161,11 @@
     justify-content: start;
     align-items: start;
     gap: .3rem;
-    padding: 0 .7rem;
+    padding: .5rem .7rem;
+    margin: 0 .7rem;
+    border-radius: .5rem;
+    background: var(--card-bg);
+    color: var(--text-color);
 }
 
 .conversationPreview p {
@@ -176,6 +179,7 @@
 
 .conversationPreview span {
     font-size: .8rem;
+    color: var(--gray-color);
 }
 
 .conversationsList {

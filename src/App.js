@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Navbar from "./components/general/Navbar";
 import Footer from "./components/general/Footer";
@@ -17,6 +17,8 @@ import DashboardSection from "./components/general/DashboardSection";
 import Notifications from "./components/general/Notifications";
 import Shop from "./components/general/Shop";
 import CreateVideo from './pages/CreateVideo';
+import Conversation from "./components/general/Conversation"
+import VideoPreview from "./components/general/VideoPreview";
 
 function App() {
   const { user } = useContext(AuthContext).userData;
@@ -30,8 +32,9 @@ function App() {
             exact
             element={user ? <CommunityPage /> : <HomePage />}
           >
-            <Route path="/videos" element={<Videos />} />
-            <Route path="/" element={<DashboardSection />} />
+            <Route path="/videos" exact element={<Videos />} />
+            <Route path="/" exact element={<DashboardSection />} />
+            <Route path="/conversation/:id" exact element={<Conversation />} />
             <Route path="/shop" element={<Shop />} />
 
             <Route
@@ -39,6 +42,13 @@ function App() {
               exact
               element={user ? <Notifications /> : <Login />}
             />
+
+<Route
+              path="/video/:videoId"
+              exact
+              element={user ? <VideoPreview /> : <Login />}
+            />
+
 
 
 
@@ -53,8 +63,8 @@ function App() {
               exact
               element={user ? <CreateVideo /> : <Login />}
             />
-          <Route path="/register" exact element={<Register />} />
-          <Route path="/login" exact element={<Login />} />
+          <Route path="/register" exact element={user ? <Navigate to={"/"} /> : <Register />} />
+          <Route path="/login" exact element={user ? <Navigate to={"/"} /> : <Login />} />
           <Route path="/terms-of-service" exact element={<TermsOfService />} />
           <Route path="/about" exact element={<AboutPage />} />
           <Route path="/latest-honors" exact element={<LatestHonorsPage />} />

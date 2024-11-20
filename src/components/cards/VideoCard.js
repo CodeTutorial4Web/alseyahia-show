@@ -14,10 +14,14 @@ export default function VideoCard({
 }) {
 
 
+  console.log(videoTime)
+
   return (
     <div className="videoCard">
+
+
+      <Link  to={"/video/" + videoId}>
       <div
-        to={"/video/" + videoId}
         className="videoThumbnail"
         style={{
           backgroundImage: `url(${
@@ -29,13 +33,15 @@ export default function VideoCard({
       >
 
         <span className="videoDuration">
-            {}
+            { videoTime != undefined ? videoTime[0] + ":" + videoTime[1] : "00:00"}
         </span>
       </div>
 
-      <Link  to={"/video/" + videoId}>
+      <div >
         {videoTitle.length > 50 ? videoTitle.slice(0, 50) + "..." : videoTitle}
-      </Link>
+      </div>
+      </Link >
+   
 
       <Link className="videoData" to={"/user/" /* user id */}>
         <div className="videoUserData">

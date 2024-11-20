@@ -1,0 +1,206 @@
+@import url(main.css);
+
+
+
+.conversationSection {
+    direction: ltr;
+    width: 100%;
+    background: url(.././images/conersationBg2.png);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: column;
+    position: relative;
+    padding-top: 4rem;
+}
+
+.conversationSection .user {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: .5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: var(--navbar-bg);
+    padding: .7rem 2rem;
+    width: 100%;
+}
+
+.conversationSection .user ul {
+    display: flex;
+    gap: 2rem;
+}
+
+
+
+.conversationSection .user ul li:nth-child(1){
+    list-style: none;
+}
+
+.conversationSection .user p {
+    font-weight: 700;
+    line-height: .9rem;
+    font-size: 1rem;
+}
+
+.conversationSection .user span {
+    font-size: .7rem;
+}
+.conversationSection .user b {
+    font-size: .7rem;
+}
+
+.conversationSection .user b.online {
+    color: rgb(0, 173, 0);
+}
+
+.conversationSection .user b.offline {
+    color: rgb(222, 46, 46);
+}
+
+.conversationSection .user .userData {
+    display: flex;
+    flex-direction: column;
+}
+
+.conversationGrid {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 3rem;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 2rem 0;
+}
+
+.conversationGrid .messageContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.conversationGrid .message {
+    max-width: 49%;
+    padding: 1rem;
+    border-radius: .5rem;
+    position: relative;
+}
+
+.conversationGrid .senderMessage .message::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, var(--main-color) 0%, var(--main-color) 50%, transparent 50%, transparent);
+    position: absolute;
+    top: 0;
+    right: -18px;
+}
+
+.conversationGrid .recieverMessage .message::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(-135deg, var(--card-bg) 0%, var(--card-bg) 50%, transparent 50%, transparent);
+    position: absolute;
+    top: 0;
+    left: -18px;
+}
+
+.conversationGrid .message p {
+    font-size: .8rem;
+}
+
+.conversationGrid .message b {
+    font-size: .8rem;
+    margin-top: .5rem;
+}
+
+.conversationGrid .messageContainer.senderMessage {
+    justify-content: end;
+}
+
+.conversationGrid .messageContainer.senderMessage .message {
+    background: var(--main-color);
+    border-top-right-radius: 0;
+
+}
+
+.conversationGrid .messageContainer.recieverMessage .message {
+    background: var(--card-bg);
+    border-top-left-radius: 0;
+
+}
+
+.conversationGrid .messageContainer.recieverMessage {
+    justify-content: start;
+}
+
+.createMessage {
+    width: 100%;
+    padding: .5rem;
+}
+
+.createMessage .sendMessageForm {
+    display: flex;
+    width: 100%;
+}
+
+.createMessage .sendMessageForm input {
+    width: 100%;
+    padding: .5rem 1rem;
+    background: var(--card-bg);
+    
+    border-radius: .5rem;
+    border: 1px solid transparent;
+    outline: none;
+    color: var(--text-color);
+    transition: var(--basic-transition);
+}
+
+.createMessage .sendMessageForm input::placeholder {
+    font-family: "Mulish", sans-serif;
+}
+
+.createMessage .sendMessageForm input:focus {
+    border-color: var(--main-color);
+    
+}
+
+.createMessage .sendMessageForm span {
+    border-radius: .5rem;
+    border: none;
+    background: var(--card-bg);
+    padding: 1rem 1.1rem;
+    color: var(--text-color);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: var(--basic-transition);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: .5rem;
+}
+
+.createMessage .sendMessageForm button {
+    border-radius: .5rem;
+    border: none;
+    background: var(--main-color);
+    padding: 1rem 1.1rem;
+    color: var(--text-color);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: var(--basic-transition);
+    font-size: 1.1rem;
+    margin-left: 2rem;
+}
+

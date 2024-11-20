@@ -1,5 +1,6 @@
 import { useState } from "react";
 import UserAvatar from "./UserAvatar";
+import { Link } from "react-router-dom";
 
 export default function ConversationPreview({ user }) {
   let grade = "Not Listed";
@@ -60,12 +61,12 @@ export default function ConversationPreview({ user }) {
   }
 
   return (
-    <div className="conversationPreview">
+    <Link to={"/conversation/1355"} className="conversationPreview">
       <UserAvatar scale={1} avatarImage={""} />
       <div>
         <p>{user.username}</p>
         <span>{grade}</span>
       </div>
-    </div>
+    </Link>
   );
 }

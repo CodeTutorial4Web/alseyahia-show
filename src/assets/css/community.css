@@ -92,6 +92,7 @@
     height: 0;
     overflow: hidden;
     transition: var(--basic-transition);
+    z-index: 3;
 }
 
 .communitySection .community .postsGrid .postsGrid__item .dropdown span {
@@ -209,8 +210,8 @@
 
 
 .communitySection .community .postsGrid .postsGrid__item .postsGrid__item__image {
-    height: 50vh;
-    width: 100%;
+    width: 100%;    
+    aspect-ratio: 16 / 9;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

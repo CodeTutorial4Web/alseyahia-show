@@ -22,13 +22,15 @@ export default function ShopItem({image, title, desc, price}) {
           {desc.length > 100 ? desc.slice(0, 100) + "..." : desc}
         </p>
 
-        <div className="shopItem__priceAddToCart">
+       
+      </Link>
+
+      <div className="shopItem__priceAddToCart">
             <span>{price} <i>Points</i></span>
             <button>
                 <BiCart />
             </button>
         </div>
-      </Link>
     </div>
   );
 }

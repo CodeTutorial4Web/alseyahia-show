@@ -12,8 +12,17 @@
     gap: 2rem;
     margin-top: 2rem;
     width: 100%;
+    font-family: "Mulish", sans-serif;
+
 }
 
+.register, .login {
+    direction: ltr;
+}
+
+main .header {
+    font-family: "Mulish", sans-serif;
+}
 
 .form .form__group {
     width: 100%;
@@ -37,11 +46,19 @@
     color: var(--text-color);
     font-size: 1rem;
     font-weight: 500;
-    font-family: "Noto Sans Arabic", sans-serif;
+    font-family: "Mulish", sans-serif;
     outline: none;
     transition: var(--basic-transition);
     border: 1px solid transparent;
+    font-family: "Mulish", sans-serif;
+
 }
+
+.form .form__group label {
+    font-family: "Mulish", sans-serif;
+
+}
+
 
 .form .form__group select {
     padding: 1rem;
@@ -51,10 +68,12 @@
     color: var(--text-color);
     font-size: 1rem;
     font-weight: 500;
-    font-family: "Noto Sans Arabic", sans-serif;
+    font-family: "Mulish", sans-serif;
     outline: none;
     transition: var(--basic-transition);
     border: 1px solid transparent;
+    font-family: "Mulish", sans-serif;
+
 }
 
 .form .form__group input:focus {
@@ -77,16 +96,22 @@
     width: max-content;
     position: relative;
     overflow: hidden;
+    font-family: "Mulish", sans-serif;
+
 }
 
 .form__group__btn:hover {
     background: var(--main-color);
     color: #f1f1f1;
+    font-family: "Mulish", sans-serif;
+
 }
 
 .form__group p a {
     margin-right: .2rem;
     color: var(--main-color);
+    font-family: "Mulish", sans-serif;
+
 }
 
 .form__group p a:hover {
@@ -108,9 +133,11 @@
     background: none;
     width: calc(100% - 3rem);
 
-    border-left: 0;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    border-right: 0;
+    border-top-right-radius: 0;
+    font-family: "Mulish", sans-serif;
+
+    border-bottom-right-radius: 0;
 }
 
 .form__group .phoneNumber p {
@@ -119,10 +146,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Mulish", sans-serif;
 
-    background: #fdf7f7;
+    background: var(--navbar-bg);
     padding: 0;
-    box-shadow: .00001rem 0 3rem #30303041;
+    border: 2px solid var(--navbar-bg);
 }
 
 .form .phoneNumber input:focus {

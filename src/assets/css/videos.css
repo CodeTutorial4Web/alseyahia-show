@@ -21,8 +21,19 @@
     background-size: cover;
     border-radius: .5rem;
     margin-bottom: .5rem;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding: .2rem;
 }
 
+.videoThumbnail .videoDuration {
+    background: #000d;
+    font-size: .8rem;
+    font-weight: 500;
+    padding: .2rem .3rem;
+    border-radius: .2rem;
+}
 
 .videoUserData {
     display: flex;

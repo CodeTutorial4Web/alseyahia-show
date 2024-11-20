@@ -2,6 +2,6 @@
 
 export default function Header({text}) {
   return (
-    <h2 className="header">{text}</h2>
+    <h2 className="header" >{text}</h2>
   );
 }

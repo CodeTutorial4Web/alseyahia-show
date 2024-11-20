@@ -1,0 +1,121 @@
+@import url(main.css);
+
+
+.videoSection {
+    width: 100%;
+    padding: 2rem;
+}
+
+.videoSection .videoPreview {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: .5rem;
+}
+
+
+.videoSection .videoInfo {
+    margin-top: 1rem;
+}
+
+.videoSection .videoInfo .title__likes__subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.videoSection .videoInfo .title__likes__subscribe .likes__subscribe {
+    display: flex;
+
+    gap: 1rem;
+}
+
+.videoSection .videoInfo .title__likes__subscribe span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--card-bg);
+    padding: .5rem 1rem;
+    border-radius: 15rem;
+    font-size: 1.1rem;
+    color: var(--gray-color);
+    font-weight: 900;
+    gap: .2rem;
+    pointer-events: none;
+}
+
+.videoSection .videoInfo .title__likes__subscribe .subscribeBtn {
+    background: #fff;
+    border: none;
+    color: var(--bg-color);
+    cursor: pointer;
+    transition: var(--basic-transition);
+    padding: .5rem 1rem;
+    border-radius: 15rem;
+    font-size: .8rem;
+
+    font-weight: 900;
+
+}
+
+.videoSection .videoInfo .title__likes__subscribe span::selection {
+    background: var(--card-bg);
+}
+
+.videoSection .videoInfo h2 {
+    font-weight: 900;
+    max-width: 75%;
+}
+
+.videoSection .videoInfo .userData {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: .5rem;
+    background: var(--card-bg);
+    padding: .5rem;
+    border-radius: .5rem;
+    width: fit-content;
+    margin-top: 1rem;
+}
+
+.videoSection .videoInfo .userData .username {
+    display: flex;
+    flex-direction: column;
+}
+
+.videoSection .videoInfo .userData p {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.videoSection .videoInfo .userData ul {
+    font-size: .8rem;
+    color: var(--gray-color);
+    display: flex;
+    gap: 1.8rem;
+}
+
+.videoSection .videoInfo .userData li:nth-child(1) {
+    list-style: none;
+}
+
+.videoSection .videoInfo .videoDesc {
+    font-size: .8rem;
+    max-width: 95%;
+}
+
+.videoSection .videoInfo .videoDesc__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-top: 1rem;
+    gap: .1rem;
+}
+
+.videoSection .videoInfo .videoDesc__container h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    
+}
