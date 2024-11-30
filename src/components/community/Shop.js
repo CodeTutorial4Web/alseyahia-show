@@ -1,4 +1,4 @@
-import Header from "./Header";
+import Header from "../general/Header";
 import ".././.././assets/css/shop.css";
 import { BiCart } from "react-icons/bi";
 import ShopItem from "../cards/ShopItem";

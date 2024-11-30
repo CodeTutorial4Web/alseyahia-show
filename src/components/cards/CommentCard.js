@@ -18,7 +18,7 @@ export default function CommentCard({ inputRef }) {
   return (
     <div className="commentCard">
       <div className="userData">
-        <UserAvatar scale={0.8} avatarImage={""} />
+        <UserAvatar scale={0.7} avatarImage={""} />
         <span className="username">@mostafa_ahmed</span>
       </div>
 

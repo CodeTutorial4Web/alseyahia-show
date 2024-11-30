@@ -40,6 +40,7 @@
     position: relative;
 }
 
+
 .userCart span {
     position: absolute;
     bottom: 0;
@@ -81,7 +82,63 @@
     display: flex;
     justify-content: end;
     align-items: center;
+    position: relative;
 }
+
+.shopSection .blog__grid .shopItem .dropdown {
+    position: absolute;
+    top: 1.5rem;
+    right: -7rem;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    background: #222;
+    border-radius: .5rem;
+    height: 0;
+    overflow: hidden;
+    transition: var(--basic-transition);
+    z-index: 3;
+}
+
+.shopSection .blog__grid .shopItem .dropdown.show {
+    height: 5.1rem;
+    transition: var(--basic-transition);
+}
+
+.shopSection .blog__grid .shopItem .dropdown span {
+    padding: .5rem 1rem;
+    padding-right: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .2rem;
+    cursor: pointer;
+    transition: var(--basic-transition);
+}
+
+.shopSection .blog__grid .shopItem .dropdown .share:hover {
+
+    color: rgb(108, 172, 255);
+}
+
+
+.shopSection .blog__grid .shopItem .dropdown .delete:hover {
+    color: rgb(255, 108, 108);
+
+}
+
+.shopSection .blog__grid .shopItem .dropdown .edit:hover {
+
+    color: rgb(255, 204, 108);
+}
+
+.shopSection .blog__grid .shopItem .dropdown .copy:hover {
+
+    color: rgb(108, 118, 255);
+}
+
+
 
 .shopSection .blog__grid .shopItem .menu .dots {
     background: none;

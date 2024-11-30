@@ -33,6 +33,9 @@
     font-weight: 500;
     padding: .2rem .3rem;
     border-radius: .2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .videoUserData {
@@ -145,3 +148,20 @@
 .searchVideo button:hover {
     border-color: var(--main-color);
 }
+
+@media screen and (max-width: 936px) {
+    .searchVideo {
+        gap: 1rem;
+    }
+
+.searchVideo a{
+    font-size: .7rem;
+ }
+
+
+.searchVideo input {
+    width: 25vw;
+}
+
+}
+

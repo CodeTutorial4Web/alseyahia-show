@@ -1,13 +1,35 @@
-import moment from "moment/moment";
 import ".././../assets/css/conversation.css";
 import { BiPaperPlane, BiSmile } from "react-icons/bi";
 import Message from "../cards/Message";
-import UserAvatar from "./UserAvatar";
+import UserAvatar from "../general/UserAvatar";
+import Picker from "@emoji-mart/react";
+import data from "@emoji-mart/data";
+import { useRef, useState } from "react";
 
 export default function Conversation() {
+  // message input
+
+  const [message, setMessage] = useState("");
+  const messageInp = useRef();
+  // functions
   function handleFormSubmit(e) {
     e.preventDefault();
   }
+
+  // useStates
+
+  const [showPicker, setShowPicker] = useState(false);
+
+  function typeEmoji(e) {
+    messageInp.current.focus();
+    const sympol = e.unified.split("_");
+    const codeArray = [];
+    sympol.forEach((code) => codeArray.push(`0x${code}`));
+    const emoji = String.fromCodePoint(...codeArray);
+    setMessage(message + emoji);
+    console.log(e);
+  }
+
   return (
     <section className="conversationSection">
       <div className="user">
@@ -64,10 +86,39 @@ export default function Conversation() {
       </div>
       <div className="createMessage">
         <form className="sendMessageForm" onSubmit={handleFormSubmit}>
-          <input type="text" placeholder="Type your message..." />
-          <span>
-            <BiSmile />
-          </span>
+<div className="messageInput__picker">
+
+<textarea
+            type="text"
+            ref={messageInp}
+            value={message}
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
+            placeholder="Type your message..."
+          ></textarea>
+
+          <div className="emojiPicker">
+            <span
+              onClick={() => {
+                setShowPicker(!showPicker);
+              }}
+            >
+              <BiSmile />
+            </span>
+
+            {showPicker ? (
+              <div className={"show"}>
+                <Picker data={data} emojiSize={25} onEmojiSelect={typeEmoji} />
+              </div>
+            ) : (
+              ""
+            )}
+          </div>
+</div>
+
+        
+
           <button type="submit">
             <BiPaperPlane />
           </button>

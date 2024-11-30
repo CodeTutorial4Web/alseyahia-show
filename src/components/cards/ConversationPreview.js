@@ -1,10 +1,9 @@
 import { useState } from "react";
-import UserAvatar from "./UserAvatar";
+import UserAvatar from "../general/UserAvatar";
 import { Link } from "react-router-dom";
 
 export default function ConversationPreview({ user }) {
   let grade = "Not Listed";
-
 
   // grades loop
   switch (user.grade) {

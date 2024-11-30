@@ -1,11 +1,36 @@
 @import url(main.css);
-
+@import url(community.css);
 
 .videoSection {
     width: 100%;
     padding: 2rem;
+    padding-bottom: 4rem;
 }
 
+.videoContainer {
+    width: 100%;
+    position: relative;
+}
+
+.videoContainer span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--card-bg);
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    font-size: 1.1rem;
+    color: var(--gray-color);
+    font-weight: 900;
+    gap: .2rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.videoContainer span:hover {
+    color: var(--text-color);
+}
 .videoSection .videoPreview {
     width: 100%;
     aspect-ratio: 16/9;
@@ -29,32 +54,39 @@
     gap: 1rem;
 }
 
-.videoSection .videoInfo .title__likes__subscribe span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--card-bg);
-    padding: .5rem 1rem;
-    border-radius: 15rem;
-    font-size: 1.1rem;
-    color: var(--gray-color);
-    font-weight: 900;
-    gap: .2rem;
-    pointer-events: none;
-}
 
-.videoSection .videoInfo .title__likes__subscribe .subscribeBtn {
+
+.videoSection .videoInfo .title__likes__subscribe .subscribeBtn,
+.videoSection .videoInfo .title__likes__subscribe .commentBtn
+ {
     background: #fff;
     border: none;
     color: var(--bg-color);
     cursor: pointer;
     transition: var(--basic-transition);
     padding: .5rem 1rem;
-    border-radius: 15rem;
+    border-radius: .5rem;
     font-size: .8rem;
 
     font-weight: 900;
+}
 
+.videoSection .videoInfo .title__likes__subscribe .commentBtn {
+    background: #444;
+    color: var(--text-color);
+
+}
+
+.videoSection .videoInfo .title__likes__subscribe .commentBtn:hover {
+    background: #fff;
+    color: var(--bg-color);
+
+
+}
+
+.videoSection .videoInfo .title__likes__subscribe .subscribeBtn:hover {
+    background: #444;
+    color: var(--text-color);
 }
 
 .videoSection .videoInfo .title__likes__subscribe span::selection {
@@ -66,7 +98,7 @@
     max-width: 75%;
 }
 
-.videoSection .videoInfo .userData {
+.videoSection .videoInfo .vide__userData {
     display: flex;
     justify-content: start;
     align-items: start;
@@ -78,44 +110,75 @@
     margin-top: 1rem;
 }
 
-.videoSection .videoInfo .userData .username {
+.videoSection .videoInfo .vide__userData .username {
     display: flex;
     flex-direction: column;
 }
 
-.videoSection .videoInfo .userData p {
+.videoSection .videoInfo .vide__userData p {
     font-size: 1rem;
     color: var(--text-color);
     font-weight: 700;
 }
 
-.videoSection .videoInfo .userData ul {
+.videoSection .videoInfo .vide__userData ul {
     font-size: .8rem;
     color: var(--gray-color);
     display: flex;
     gap: 1.8rem;
 }
 
-.videoSection .videoInfo .userData li:nth-child(1) {
+.videoSection .videoInfo .vide__userData li:nth-child(1) {
     list-style: none;
 }
 
 .videoSection .videoInfo .videoDesc {
     font-size: .8rem;
-    max-width: 95%;
 }
 
-.videoSection .videoInfo .videoDesc__container {
+.videoSection .videoInfo .videoDesc__container,
+
+.videoSection .videoInfo .videoComments__container {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
     margin-top: 1rem;
     gap: .1rem;
+    padding-bottom: 2rem;
 }
 
-.videoSection .videoInfo .videoDesc__container h3 {
+.videoSection .videoInfo .videoDesc__container h3,
+.videoSection .videoInfo .videoComments__container h3 {
     font-size: 1rem;
     font-weight: 700;
-    
+
+}
+
+.videoSection .videoInfo .videoComments__container .createComment {
+    background: #100e0e;
+    margin-bottom: 1rem;
+}
+
+.videoSection .videoInfo .videoComments__container .videoComments {
+    margin-top: 1rem;
+    width: 80%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
+
+
+
+@media screen and (max-width: 936px) {
+    .videoSection .videoInfo h2 {
+        font-size: 1.3rem;
+
+    }
+.videoSection .videoInfo .videoComments__container .videoComments {
+    width: 100%;
+
+    }
+
 }

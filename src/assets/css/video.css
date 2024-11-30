@@ -1,0 +1,173 @@
+@import url(main.css);
+
+
+
+.video__container {
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.video__container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+
+}
+
+
+.video__container:hover .controlls{
+    transform: translateY(0);
+}
+
+.video__container .controlls {
+    position: absolute;
+    bottom: 0%;
+    transform: translateY(100%);
+    left: 0%;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: .5rem 1rem;
+    transition: var(--medium-transition);
+    background: linear-gradient(
+        to top,
+        #000,
+        transparent 100%
+    );
+}
+
+.videoDurationBar__container {
+    width: 100% ;
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.videoDurationBar {
+    width: 100%;
+    outline: none;
+    border-radius: none;
+    transition:  0.3s ;
+    color: var(--main-color);    height: 5px;
+
+}
+
+.videoDurationBar::-webkit-slider-thumb {
+
+    opacity: 0;
+}
+
+.videoDurationBar:hover::-webkit-slider-thumb {
+    opacity: 1;
+}
+
+.controlls .buttons,
+.controlls .rightSide__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controlls .rightSide__buttons  {
+    gap: 1rem;
+}
+.controlls .btnController {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controlls .videoVolume__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    margin-left: 1rem;
+}
+
+.controlls .videoVolume__container input{
+    width: 0;
+    opacity: 0;
+    height: 5px;
+}
+
+.controlls .videoVolume__container:hover input{
+    width: 80px;
+    opacity: 1;
+}
+
+.time {
+    font-size: .9rem;
+}
+
+.controlls .speedContainer {
+    position: relative;
+
+}
+
+
+.controlls .speedContainer.show .dropDown{
+    opacity: 1;
+    display: inline-block;
+}
+
+.controlls .speedContainer .dropDown {
+    background: #ddd;
+    list-style: none;
+    position: absolute;
+    top: -550%;
+    right: 0;
+    border-radius: .3rem;
+    color: #111;
+    opacity: 0;
+    transition: var(--medium-transition);
+    overflow: hidden;
+    display: none;
+}
+
+.dropDown.normal li:nth-child(3){
+    background: #bbb;
+}
+
+.dropDown.speed1 li:nth-child(2){
+    background: #bbb;
+}
+
+.dropDown.speed2 li:nth-child(1){
+    background: #bbb;
+}
+
+.dropDown.slow1 li:nth-child(4){
+    background: #bbb;
+}
+
+.dropDown.slow2 li:nth-child(5){
+    background: #bbb;
+}
+
+
+.controlls .speedContainer .dropDown li {
+    cursor: pointer;
+    width: 100%;
+    padding: 0.1rem 1rem;
+
+}

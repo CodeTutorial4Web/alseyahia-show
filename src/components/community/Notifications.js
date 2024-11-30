@@ -1,6 +1,6 @@
 import "../../assets/css/notifications.css";
 import NotificationItem from "../cards/NotificationItem";
-import Header from "./Header";
+import Header from "../general/Header";
 
 export default function Notifications() {
   return (<main className="notificationsSection">

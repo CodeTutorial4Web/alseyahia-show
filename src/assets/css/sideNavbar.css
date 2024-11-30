@@ -14,6 +14,7 @@
     top: 0;
     left: 0;
     direction: ltr;
+    z-index: 99999999999;
 }
 
 .sideNavbarLinks {
@@ -23,18 +24,32 @@
     height: 100%;
 }
 
-
+.sideNavbarLinks::-webkit-scrollbar {
+    width: 3px;
+}
 
 .sideNavbar__userData {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0c0c0c;
+    padding: 1rem;
+    margin: .7rem .7rem 0 .7rem;
+    border-radius: .5rem;
+}
+
+.sideNavbar__userData button {
+    display: none;
+    cursor: pointer;
+}
+
+.sideNavbar__userData .user {
     display: flex;
     justify-content: start;
     align-items: start;
     gap: 1rem;
-    background: #222;
-    padding: 1rem;
-    margin: .7rem .7rem 0 .7rem;
-    border-radius: .5rem;
     color: var(--text-color);
+
 }
 
 
@@ -84,14 +99,15 @@
     overflow: hidden;
 }
 
-.sideNavbar .sideNavbarLinks .navLink span{
+.sideNavbar .sideNavbarLinks .navLink span {
     z-index: 9999999999;
     position: relative;
 
     transition: var(--basic-transition);
 
 }
-.sideNavbar .sideNavbarLinks  .navLink > div {
+
+.sideNavbar .sideNavbarLinks .navLink>div {
     position: absolute;
     left: 0;
     top: 0;
@@ -102,7 +118,7 @@
     transition: var(--basic-transition);
 }
 
-.sideNavbar .sideNavbarLinks .navLink:hover > div {
+.sideNavbar .sideNavbarLinks .navLink:hover>div {
     width: 100%;
 }
 
@@ -146,6 +162,7 @@
     color: var(--text-color);
     width: 100%;
 }
+
 .communityMenu li span {
     max-width: 12px;
     min-width: 12px;
@@ -187,5 +204,56 @@
     flex-direction: column;
     gap: 1rem;
     margin-top: 1rem;
+
+}
+
+
+@media screen and (max-width: 936px) {
+
+    .sideNavbar {
+        width: 100%;
+        height: fit-content;
+        align-items: end;
+        z-index: 999999999999;
+    }
+
+
+    .sideNavbar__userData {
+        width: 100%;
+        background: none;
+        padding: .7rem 2rem;
+        margin: 0;
+        position: relative;
+        z-index: 999999;
+
+    }
+
+    .sideNavbar__userData button {
+        display: inline-block;
+        background: none;
+        color: var(--text-color);
+        font-size: 1.3rem;
+        border: none;
+    }
+
+    .sideNavbar__userData .sideNavbar__userData__name {
+        display: none;
+    }
+
+    .sideNavbarLinks {
+        position: absolute;
+        left: -100%;
+        top: 100%;
+        height: 100vh;
+        background: #100e0e;
+        padding-top: 1rem;
+        transition: var(--medium-transition);
+    }
+
+
+
+    .sideNavbar.open .sideNavbarLinks {
+        left: 0;
+    }
 
 }

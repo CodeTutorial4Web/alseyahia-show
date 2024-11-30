@@ -14,8 +14,6 @@ export default function VideoCard({
 }) {
 
 
-  console.log(videoTime)
-
   return (
     <div className="videoCard">
 

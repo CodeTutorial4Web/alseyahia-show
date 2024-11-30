@@ -1,23 +1,38 @@
 import { useState } from "react";
 import ".././../assets/css/sideNavbar.css";
-import UserAvatar from "./UserAvatar";
+import UserAvatar from "../general/UserAvatar";
 import { Link } from "react-router-dom";
-import { to } from "./../../../node_modules/moment/src/lib/moment/to";
-import CommunityPreview from "./CommunityPreview";
-import ConversationPreview from "./ConversationPreview";
+import { to } from "moment/src/lib/moment/to";
+import CommunityPreview from "../cards/CommunityPreview";
+import ConversationPreview from "../cards/ConversationPreview";
 import SimpleBar from "simplebar-react";
+import { FaBars } from "react-icons/fa";
 
 export default function SideNavbar() {
-  return (
-    <aside className="sideNavbar">
-      <Link to="/user/@mohamed_hamed" className="sideNavbar__userData">
-        <UserAvatar scale={1} avatarImage={null} />
+  // Use states
 
-        <div className="sideNavbar__userData__name">
-          <p>Mostafa Ahmed</p>
-          <span>mostafa_ahmed</span>
-        </div>
-      </Link>
+  const [openNav, setOpenNav] = useState(false);
+
+  return (
+    <aside className={openNav ? "sideNavbar open" : "sideNavbar"}>
+      <div className="sideNavbar__userData">
+        <button
+          onClick={() => {
+            setOpenNav(!openNav);
+          }}
+        >
+          <FaBars />
+        </button>
+
+        <Link to="/user/@mohamed_hamed" className="user">
+          <UserAvatar scale={1} avatarImage={null} />
+
+          <div className="sideNavbar__userData__name">
+            <p>Mostafa Ahmed</p>
+            <span>mostafa_ahmed</span>
+          </div>
+        </Link>
+      </div>
 
       <div className="sideNavbarLinks">
         <div className="otherLinks">
@@ -70,6 +85,19 @@ export default function SideNavbar() {
               grade: 0,
             }}
           />
+          <ConversationPreview
+            user={{
+              username: "Ahmed Hossam",
+              grade: 0,
+            }}
+          />
+          <ConversationPreview
+            user={{
+              username: "Ahmed Hossam",
+              grade: 0,
+            }}
+          />
+
           <ConversationPreview
             user={{
               username: "Ahmed Hossam",

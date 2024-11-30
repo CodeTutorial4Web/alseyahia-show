@@ -1,14 +1,40 @@
-import { BiCart, BiDotsHorizontalRounded } from "react-icons/bi";
+import { useState } from "react";
+import { BiCart, BiDotsHorizontalRounded,  BiCopy,
+  BiEdit,
+  BiShare,
+  BiTrash,
+  BiBookmark, } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
 export default function ShopItem({image, title, desc, price}) {
+
+
+  // use states
+
+  const [showDropdown, setShowDropdown] = useState(false);
+
   return (
     <div className="shopItem">
         <div className="menu">
-            <button className="dots">
+            <button      onClick={() => {
+          setShowDropdown(!showDropdown);
+        }}className="dots">
                 <BiDotsHorizontalRounded />
             </button>
+
+            <div className={showDropdown ? "dropdown show" : "dropdown"}>
+        <span className="share">
+          <BiShare /> <b>Share</b>
+        </span>
+
+        <span className="copy">
+          <BiBookmark /> <b>Save</b>
+        </span>
+      </div>
         </div>
+
+
+
       <div
         className="shopItem__image"
         style={{

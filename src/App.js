@@ -1,24 +1,25 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import Navbar from "./components/general/Navbar";
 import Footer from "./components/general/Footer";
-import AboutPage from "./pages/AboutPage";
-import LatestHonorsPage from "./pages/LatestHonorsPage";
-import BlogPage from "./pages/BlogPage";
 import TermsOfService from "./pages/TermsOfServiece";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import CommunityPage from "./pages/CommunityPage";
 import { AuthContext } from "./authContext/AuthContext";
 import { useContext } from "react";
-import Videos from "./components/general/Videos";
-import Community from "./components/general/Community";
-import DashboardSection from "./components/general/DashboardSection";
-import Notifications from "./components/general/Notifications";
-import Shop from "./components/general/Shop";
-import CreateVideo from './pages/CreateVideo';
-import Conversation from "./components/general/Conversation"
-import VideoPreview from "./components/general/VideoPreview";
+import Videos from "./components/community/Videos";
+import Community from "./components/community/CommunitySection";
+import DashboardSection from "./components/community/DashboardSection";
+import Notifications from "./components/community/Notifications";
+import Shop from "./components/community/Shop";
+import CreateVideo from "./pages/CreateVideo";
+import Conversation from "./components/community/Conversation";
+import VideoPreview from "./components/community/VideoSection";
 
 function App() {
   const { user } = useContext(AuthContext).userData;
@@ -43,14 +44,11 @@ function App() {
               element={user ? <Notifications /> : <Login />}
             />
 
-<Route
+            <Route
               path="/video/:videoId"
               exact
               element={user ? <VideoPreview /> : <Login />}
             />
-
-
-
 
             <Route
               path="/community/:communityId/:channelName"
@@ -59,17 +57,23 @@ function App() {
             />
           </Route>
           <Route
-              path="/create-video"
-              exact
-              element={user ? <CreateVideo /> : <Login />}
-            />
-          <Route path="/register" exact element={user ? <Navigate to={"/"} /> : <Register />} />
-          <Route path="/login" exact element={user ? <Navigate to={"/"} /> : <Login />} />
+            path="/create-video"
+            exact
+            element={user ? <CreateVideo /> : <Login />}
+          />
+          <Route
+            path="/register"
+            exact
+            element={user ? <Navigate to={"/"} /> : <Register />}
+          />
+          <Route
+            path="/login"
+            exact
+            element={user ? <Navigate to={"/"} /> : <Login />}
+          />
           <Route path="/terms-of-service" exact element={<TermsOfService />} />
-          <Route path="/about" exact element={<AboutPage />} />
-          <Route path="/latest-honors" exact element={<LatestHonorsPage />} />
-          <Route path="/blog" exact element={<BlogPage />} />
         </Routes>
+
       </Router>
     </div>
   );

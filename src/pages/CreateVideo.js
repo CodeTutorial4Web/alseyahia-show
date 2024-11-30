@@ -3,35 +3,37 @@ import Header from "../components/general/Header";
 import ".././assets/css/createVideo.css";
 import { BiCheck, BiCheckCircle, BiPlusCircle, BiUpload, BiX } from "react-icons/bi";
 import { useRef, useState } from "react";
+import Video from "../components/general/Video";
 
 export default function CreateVideo() {
   function handleFormSubmit(e) {
     e.preventDefault();
+    alert()
   }
-  const [videoSrc, setVideoSrc] = useState(null);
   const [enableQuiz, setEnableQuiz] = useState(false);
   const [quizType, setQuizType] = useState("choose");
+  const [base64Image, setBase64Image] = useState('');
 
-  const videoInputRef = useRef();
+  const imageInputRef = useRef();
 
-  function handleUploadVideo(e) {
-    const files = e.target.files;
-    if (files && files.length > 0) {
-      const videoFile = files[0];
-      console.log("Video file:", videoFile);
-
-      const videoURL = URL.createObjectURL(videoFile);
-      setVideoSrc(videoURL);
-    } else {
-      console.log("No video selected.");
-      setVideoSrc(null);
+  function handleUploadImage(e) {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      
+      reader.onloadend = () => {
+        setBase64Image(reader.result); // Set the base64 image string
+      };
+      
+      reader.readAsDataURL(file); // Convert image to base64
     }
+
+    console.log(base64Image);
+    
   }
 
-  function handleResetVideo() {
-    videoInputRef.current.value = "";
-    setVideoSrc(null);
-  }
+
+
 
   function handleQuizType(type) {
     setQuizType(type);
@@ -41,29 +43,51 @@ export default function CreateVideo() {
       <Header text="Create video" />
       <form onSubmit={handleFormSubmit}>
         <div className="formFirstPart">
-          <div className="formGroup uploadVideoGroup" title="Upload video">
-            {videoSrc ? (
-              <div>
-                <video src={videoSrc} controls></video>
+          <div className="formGroup uploadTumbnailGroup" title="Upload thumbnail">
+            {base64Image ? (
+              <div className="prevImage">
+                <div style={{
+                  backgroundImage:`url(${base64Image && base64Image})`,
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                  width: "100%",
+                  height: "100%"
+                }}></div>
 
-                <span>
+                <span className="remove" onClick={() => {
+                  imageInputRef.current.value = "";
+                  setBase64Image("");
+                }}>
                   <BiX />
                 </span>
               </div>
             ) : (
-              <label htmlFor="uploadVideo" title="Upload video">
+              <label htmlFor="uploadImage" title="Upload thumbnail">
                 <BiUpload />
-                <span>Click to upload video</span>
+                <span>Click to upload thumbnail</span>
               </label>
             )}
 
             <input
               type="file"
-              id="uploadVideo"
+              id="uploadImage"
               onChange={(e) => {
-                handleUploadVideo(e);
+                handleUploadImage(e);
+
               }}
-              ref={videoInputRef}
+              ref={imageInputRef}
+              accept="image/*"
+            />
+          </div>
+
+          <div className="formGroup">
+            <label htmlFor="videoInput">Choose video</label>
+
+            <input
+              className="regInput"
+              placeholder="Video title..."
+              type="file"
+              id="videoInput"
               accept=".mp4"
             />
           </div>
@@ -87,9 +111,12 @@ export default function CreateVideo() {
               id="videoDescription"
             ></textarea>
           </div>
+
+        <button className="submitBtn" type="submit">Create</button>
+
         </div>
 
-        <div
+        {/* <div
           className={enableQuiz ? "formSecondPart enable" : "formSecondPart"}
         >
           <button
@@ -182,7 +209,9 @@ export default function CreateVideo() {
               <div>Complete</div>
             )}
           </div>
-        </div>
+        </div> */}
+
+
       </form>
     </main>
   );

@@ -91,6 +91,9 @@
 }
 
 
+.link:hover {
+    text-decoration: underline;
+}
 
 .btn__link  {
     padding: 0;

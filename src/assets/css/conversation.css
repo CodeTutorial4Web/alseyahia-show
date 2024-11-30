@@ -28,8 +28,8 @@
     top: 0;
     left: 0;
     z-index: 999;
-    background: var(--navbar-bg);
-    padding: .7rem 2rem;
+    background: var(--card-bg);
+    padding: .7rem;
     width: 100%;
 }
 
@@ -155,33 +155,46 @@
     width: 100%;
 }
 
-.createMessage .sendMessageForm input {
+.messageInput__picker {
     width: 100%;
-    padding: .5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: var(--card-bg);
-    
     border-radius: .5rem;
-    border: 1px solid transparent;
-    outline: none;
-    color: var(--text-color);
-    transition: var(--basic-transition);
+
 }
 
-.createMessage .sendMessageForm input::placeholder {
+.messageInput__picker .emojiPicker > div {
+    position: absolute;
+    bottom: 200%;
+    right: 0;
+}
+
+.createMessage .sendMessageForm textarea {
+    width: 100%;
+    padding: .5rem 1rem;
+    resize: none;
+    outline: none;
+    border: none;
+    color: var(--text-color);
+    transition: var(--basic-transition);
+    background: var(--card-bg);
+    border-radius: .5rem;
+
+}
+
+.createMessage .sendMessageForm textarea::placeholder {
     font-family: "Mulish", sans-serif;
 }
 
-.createMessage .sendMessageForm input:focus {
-    border-color: var(--main-color);
-    
-}
 
 .createMessage .sendMessageForm span {
     border-radius: .5rem;
     border: none;
     background: var(--card-bg);
-    padding: 1rem 1.1rem;
-    color: var(--text-color);
+    padding: 0 1.1rem 0 0;
+    color: var(--gray-color);
     border: 1px solid transparent;
     cursor: pointer;
     transition: var(--basic-transition);
@@ -191,6 +204,11 @@
     margin-left: .5rem;
 }
 
+
+.createMessage .sendMessageForm span:hover {
+    color: var(--text-color);
+
+}
 .createMessage .sendMessageForm button {
     border-radius: .5rem;
     border: none;
@@ -204,3 +222,6 @@
     margin-left: 2rem;
 }
 
+.emojiPicker {
+    position: relative;
+}

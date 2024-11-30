@@ -7,6 +7,8 @@
     justify-content: end;
     direction: ltr;
     padding-left: var(--sideNavbar-width);
+    height: 100vh;
+    overflow-y: auto;
 }
 
 
@@ -22,6 +24,8 @@
     margin: auto;
     display: flex;
     flex-direction: column;
+    padding-bottom: 2rem;
+
 }
 
 .communitySection .community .createPost {
@@ -36,6 +40,13 @@
 
 }
 
+.communitySection .community .createPost .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
 .communitySection .community .createPost span {
     display: flex;
     justify-content: center;
@@ -46,7 +57,17 @@
     font-weight: 700;
 }
 
-.communitySection .community .createPost:hover span {
+
+.communitySection .community .createPost .text i {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.communitySection .community .createPost:hover .text i,
+.communitySection .community .createPost:hover .text span
+
+{
     color: var(--main-color);
 }
 
@@ -55,7 +76,8 @@
     flex-direction: column;
     justify-content: start;
     align-items: stretch;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    gap: 1rem;
 }
 
 .communitySection .community .postsGrid .postsGrid__item {
@@ -301,7 +323,7 @@
     height: 65.889vh;
 }
 
-.postsGrid__item__comments .createComment {
+ .createComment {
     display: flex;
     width: 100%;
     gap: .5rem;
@@ -321,12 +343,12 @@
     overflow-y: scroll;
 }
 
-.postsGrid__item__comments .createComment>div {
+ .createComment > div {
     margin-right: 1rem;
 }
 
-.postsGrid__item__comments .createComment input {
-    width: 85%;
+ .createComment input {
+    width: 100%;
     padding: .5rem 1rem;
     background: var(--card-bg);
     border-radius: .5rem;
@@ -336,8 +358,8 @@
     transition: var(--basic-transition);
 }
 
-.postsGrid__item__comments .createComment button {
-    width: 10%;
+ .createComment button {
+    
     border-radius: .5rem;
     border: none;
     background: var(--card-bg);
@@ -349,43 +371,44 @@
 }
 
 
-.postsGrid__item__comments .createComment button:hover {
+ .createComment button:hover {
     border-color: var(--main-color);
 }
 
-.postsGrid__item__comments .createComment input::placeholder {
+ .createComment input::placeholder {
     font-family: "Mulish", sans-serif;
 }
 
-.postsGrid__item__comments .createComment input:focus {
+ .createComment input:focus {
     border-color: var(--main-color);
 
 }
 
-.postsGrid__item__comments .commentCard {
+ .commentCard {
     display: flex;
     justify-content: start;
     align-items: start;
     flex-direction: column;
 }
 
-.postsGrid__item__comments .commentCard .userData {
+ .commentCard .userData {
     display: flex;
     align-items: center;
     gap: .5rem;
 }
 
-.postsGrid__item__comments .commentCard .userData span {
+ .commentCard .userData span {
     font-weight: 900;
+    font-size: 1rem;
 }
 
-.postsGrid__item__comments .commentCard p {
+ .commentCard p {
     font-size: .8rem;
     color: var(--gray-color);
     margin-top: .3rem;
 }
 
-.postsGrid__item__comments .commentCard .commentsControlls {
+ .commentCard .commentsControlls {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -394,12 +417,12 @@
     width: 100%;
 }
 
-.postsGrid__item__comments .commentCard .commentsControlls div {
+ .commentCard .commentsControlls div {
     display: flex;
     gap: 1rem;
 }
 
-.postsGrid__item__comments .commentCard .commentsControlls button {
+ .commentCard .commentsControlls button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -412,22 +435,22 @@
     transition: var(--basic-transition);
 }
 
-.postsGrid__item__comments .commentCard .commentsControlls button:hover {
+ .commentCard .commentsControlls button:hover {
 
     color: var(--text-color);
 
 }
 
-.postsGrid__item__comments .commentCard .commentsControlls span {
+ .commentCard .commentsControlls span {
     font-size: .8rem;
 }
 
 
-.postsGrid__item__comments .commentCard .repliesBtn {
+ .commentCard .repliesBtn {
     cursor: pointer;
 }
 
-.postsGrid__item__comments .commentCard.reply {
+ .commentCard.reply {
     margin-left: 3rem;
 }
 
@@ -448,3 +471,143 @@
     overflow-y: scroll;
 
 }
+
+/*  form */
+
+
+
+.createPostForm {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #0c0c0c;
+    border-radius: .5rem;
+    padding: 2rem;
+    z-index: 9999;
+    width: 45%;
+}
+
+.createPostForm .close {
+    width: 100%;
+    padding: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+
+.createPostForm .close h3 {
+    font-size: .9rem;
+}
+
+.createPostForm .close span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .2rem;
+    font-size: 2rem;
+    transition: var(--basic-transition);
+    cursor: pointer;
+}
+
+.createPostForm .close span:hover {
+    background: #111;
+}
+
+
+.createPostForm .formContainer {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    gap: .5rem;
+}
+
+.createPostForm .formContainer button[type=submit] {
+    border: none;
+    background: #111;
+    border-radius: .5rem;
+    color: var(--text-color);
+    padding: .5rem 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--basic-transition);
+}
+
+.createPostForm .formContainer button[type=submit]:hover {
+    color: var(--main-color);
+}
+
+.createPostForm .formContainer #postBody {
+    resize: none;
+    width: 100%;
+    min-height: 40vh;
+    max-height: 40vh;
+    overflow-y: scroll;
+    background: #111;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.1rem;
+    font-family: "Mulish", sans-serif;
+    padding: 1rem;
+    outline: none;
+    color: var(--text-color);
+}
+
+.createPostForm .formContainer #postTitle {
+    resize: none;
+    width: 100%;
+    overflow-y: scroll;
+    background: #111;
+
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.1rem;
+    font-family: "Mulish", sans-serif;
+    padding: 1rem;
+    outline: none;
+    color: var(--text-color);
+
+}
+
+.createPostForm .formContainer #postBody::placeholder {
+    font-family: "Mulish", sans-serif;
+}
+
+
+@media screen and (max-width: 936px) {
+    .communityPage {
+        padding-left: 0;
+        height: calc(100vh - 4rem);
+        margin-top: 4rem;
+
+    }
+
+    .communitySection .community {
+        width: 100%;
+    }
+
+    .communitySection {
+        padding: 2rem 0;
+    }
+
+    .communitySection .community .postsGrid .postsGrid__item {
+        border-radius: 0;
+     }
+
+     .communitySection .community .createPost {
+        margin: 0 1rem 0 1rem;
+     }
+
+.communitySection .community .postsGrid .postsGrid__item .dropdown {
+    right: 1.5rem;
+}
+
+
+}
+

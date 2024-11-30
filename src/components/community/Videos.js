@@ -1,5 +1,5 @@
 import VideoCard from "../cards/VideoCard";
-import Header from "./Header";
+import Header from "../general/Header";
 import ".././../assets/css/videos.css";
 import { BiPlusCircle, BiSearch } from "react-icons/bi";
 import { Link } from 'react-router-dom';
