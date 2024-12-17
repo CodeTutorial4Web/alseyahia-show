@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import ".././.././assets/css/homepage.css";
-import Btn from "../general/Btn";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+
 
 export default function HeroSection() {
 

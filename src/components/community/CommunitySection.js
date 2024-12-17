@@ -1,12 +1,7 @@
-import { Link, useParams } from "react-router-dom";
-import Header from "../general/Header";
 
-import { useRef, useState } from "react";
 import PostItem from "../cards/PostItem";
 import CreatePost from "./CreatePost";
 export default function Community() {
-  const { communityId, channelName } = useParams();
-
   // Use states
 
   return (

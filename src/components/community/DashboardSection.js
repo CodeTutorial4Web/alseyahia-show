@@ -1,5 +1,4 @@
 import { Bar } from "react-chartjs-2";
-import { Chart as ChartJS } from "chart.js/auto";
 import { BiArrowToRight, BiBell } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
@@ -31,7 +30,7 @@ export default function DashboardSection() {
       </div>
       <Link to={"/notifications"} className="notifications">
 
-        <BiBell size={50}/>
+        <BiBell size={50} />
         <p className="notifications__title">Notifications</p>
       </Link>
       <div className="badges">
@@ -93,14 +92,14 @@ export default function DashboardSection() {
         <div className="yourPoints">
 
           <div>
-          <p className="pointsLeaderboard__title">Your points</p>
+            <p className="pointsLeaderboard__title">Your points</p>
             <b>120</b>
 
           </div>
-     
-            <Link to="/shop">
-              Awards shop <BiArrowToRight />
-            </Link>
+
+          <Link to="/shop">
+            Awards shop <BiArrowToRight />
+          </Link>
         </div>
       </div>
     </section>

@@ -1,10 +1,9 @@
 import { useRef, useState } from "react";
-import { BiCart, BiMinus, BiPaperPlane, BiPlus, BiSolidStar, BiStar } from "react-icons/bi";
+import { BiCart, BiMinus, BiPlus, BiSolidStar, BiStar } from "react-icons/bi";
 import ".././../assets/css/shopItem.css"
 import Slider from './../general/Slider';
 import Header from './../general/Header';
 import CommentCard from "../cards/CommentCard";
-import UserAvatar from "../general/UserAvatar";
 
 
 

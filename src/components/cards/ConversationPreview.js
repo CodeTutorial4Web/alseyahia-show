@@ -1,4 +1,3 @@
-import { useState } from "react";
 import UserAvatar from "../general/UserAvatar";
 import { Link } from "react-router-dom";
 

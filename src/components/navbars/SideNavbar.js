@@ -2,12 +2,12 @@ import { useState } from "react";
 import ".././../assets/css/sideNavbar.css";
 import UserAvatar from "../general/UserAvatar";
 import { Link } from "react-router-dom";
-import { to } from "moment/src/lib/moment/to";
 import CommunityPreview from "../cards/CommunityPreview";
 import ConversationPreview from "../cards/ConversationPreview";
-import SimpleBar from "simplebar-react";
 import { FaBars } from "react-icons/fa";
 import { MdSettings } from "react-icons/md";
+
+
 export default function SideNavbar() {
   // Use states
 

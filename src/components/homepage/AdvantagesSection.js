@@ -3,7 +3,6 @@ import Header from "../general/Header";
 import { FaChalkboardTeacher, FaUsers, FaMoneyBillWave, FaGlobe, FaCertificate } from "react-icons/fa";
 import { AiOutlineAppstore, AiOutlineInteraction } from "react-icons/ai";
 import { MdAccessibilityNew, MdUpdate } from "react-icons/md";
-import { BiTime } from "react-icons/bi";
 
 
 export default function AdvantagesSection() {

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import ".././../assets/css/videoPreview.css";
 import UserAvatar from "../general/UserAvatar";
-import { BiLike, BiPaperPlane } from "react-icons/bi";
+import { BiPaperPlane } from "react-icons/bi";
 import CommentCard from "../cards/CommentCard";
 import { useRef } from "react";
 import Video from './../general/Video';
@@ -14,36 +14,36 @@ export default function VideoPreview() {
 
   // functions
 
-  
+
   function handleComment(e) {
     e.preventDefault()
   }
 
-  function scrollToInput (){
+  function scrollToInput() {
     if (commentInput.current) {
-        setTimeout(() => {
-          commentInput.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 300);
-      }
-        
- 
+      setTimeout(() => {
+        commentInput.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 300);
+    }
+
+
   };
   return (
     <section className="videoSection">
 
       <div className="videoContainer">
- 
 
-    <Video />
+
+        <Video />
       </div>
-    
+
 
       <div className="videoInfo">
         <div className="title__likes__subscribe">
           <h2>Explan: lesson 1 unit 2 in computer 👨‍💻</h2>
 
           <div className="likes__subscribe">
-        
+
             <button className="commentBtn" onClick={() => {
               commentInput.current.focus()
               scrollToInput()

@@ -2,7 +2,6 @@ import {
   BiExitFullscreen,
   BiFullscreen,
   BiPause,
-  BiPhoneOutgoing,
   BiPlay,
   BiSkipNext,
   BiSkipPrevious,

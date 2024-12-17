@@ -1,9 +1,8 @@
 import Header from "../components/general/Header";
 
 import ".././assets/css/createVideo.css";
-import { BiCheck, BiCheckCircle, BiPlusCircle, BiUpload, BiX } from "react-icons/bi";
+import { BiUpload, BiX } from "react-icons/bi";
 import { useRef, useState } from "react";
-import Video from "../components/general/Video";
 
 export default function CreateVideo() {
   function handleFormSubmit(e) {
@@ -20,16 +19,16 @@ export default function CreateVideo() {
     const file = e.target.files[0];
     if (file) {
       const reader = new FileReader();
-      
+
       reader.onloadend = () => {
         setBase64Image(reader.result); // Set the base64 image string
       };
-      
+
       reader.readAsDataURL(file); // Convert image to base64
     }
 
     console.log(base64Image);
-    
+
   }
 
 
@@ -47,7 +46,7 @@ export default function CreateVideo() {
             {base64Image ? (
               <div className="prevImage">
                 <div style={{
-                  backgroundImage:`url(${base64Image && base64Image})`,
+                  backgroundImage: `url(${base64Image && base64Image})`,
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                   width: "100%",
@@ -112,7 +111,7 @@ export default function CreateVideo() {
             ></textarea>
           </div>
 
-        <button className="submitBtn" type="submit">Create</button>
+          <button className="submitBtn" type="submit">Create</button>
 
         </div>
 

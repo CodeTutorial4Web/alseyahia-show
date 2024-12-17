@@ -1,9 +1,7 @@
 import { useState } from "react";
 import {
-  BiCart, BiDotsHorizontalRounded, BiCopy,
-  BiEdit,
+  BiCart, BiDotsHorizontalRounded,
   BiShare,
-  BiTrash,
   BiBookmark,
   BiSolidStar,
 } from "react-icons/bi";

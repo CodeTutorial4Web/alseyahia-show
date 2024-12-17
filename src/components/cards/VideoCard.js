@@ -3,7 +3,6 @@ import UserAvatar from "../general/UserAvatar";
 import { Link } from "react-router-dom";
 
 export default function VideoCard({
-  user,
   videoThumbnail,
   views,
   videoTitle,
@@ -18,28 +17,27 @@ export default function VideoCard({
     <div className="videoCard">
 
 
-      <Link  to={"/video/" + videoId}>
-      <div
-        className="videoThumbnail"
-        style={{
-          backgroundImage: `url(${
-            videoThumbnail
-              ? videoThumbnail
-              : "https://www.wowmakers.com/static/e743f3689ca0c0bac8faab39023da37f/fe407/Video-thumbnail.jpg"
-          })`,
-        }}
-      >
+      <Link to={"/video/" + videoId}>
+        <div
+          className="videoThumbnail"
+          style={{
+            backgroundImage: `url(${videoThumbnail
+                ? videoThumbnail
+                : "https://www.wowmakers.com/static/e743f3689ca0c0bac8faab39023da37f/fe407/Video-thumbnail.jpg"
+              })`,
+          }}
+        >
 
-        <span className="videoDuration">
-            { videoTime != undefined ? videoTime[0] + ":" + videoTime[1] : "00:00"}
-        </span>
-      </div>
+          <span className="videoDuration">
+            {videoTime != undefined ? videoTime[0] + ":" + videoTime[1] : "00:00"}
+          </span>
+        </div>
 
-      <div >
-        {videoTitle.length > 50 ? videoTitle.slice(0, 50) + "..." : videoTitle}
-      </div>
+        <div >
+          {videoTitle.length > 50 ? videoTitle.slice(0, 50) + "..." : videoTitle}
+        </div>
       </Link >
-   
+
 
       <Link className="videoData" to={"/user/" /* user id */}>
         <div className="videoUserData">

@@ -16,7 +16,7 @@ export default function Navbar() {
       <Link to="/" className="logo">
         <img
           src={require(".././.././assets/images/logo4.png")}
-          alt="شعار السياحية"
+          alt="School logo"
         />
       </Link>
 

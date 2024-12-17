@@ -1,7 +1,6 @@
 import Header from "../general/Header";
 import ".././../assets/css/homepage.css";
 import { Link } from "react-router-dom";
-import { to } from 'moment/src/lib/moment/to';
 
 export default function AboutSection() {
   return (

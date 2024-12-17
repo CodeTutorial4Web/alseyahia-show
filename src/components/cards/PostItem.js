@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { makeClickable } from "./../../utitlities/linkDetector";
 import {
   BiBookmark,
