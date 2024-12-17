@@ -7,7 +7,7 @@ import CommunityPreview from "../cards/CommunityPreview";
 import ConversationPreview from "../cards/ConversationPreview";
 import SimpleBar from "simplebar-react";
 import { FaBars } from "react-icons/fa";
-
+import { MdSettings } from "react-icons/md";
 export default function SideNavbar() {
   // Use states
 
@@ -21,17 +21,28 @@ export default function SideNavbar() {
             setOpenNav(!openNav);
           }}
         >
+
+
+
+
+
+
           <FaBars />
         </button>
 
-        <Link to="/user/@mohamed_hamed" className="user">
+        <div className="user">
           <UserAvatar scale={1} avatarImage={null} />
 
           <div className="sideNavbar__userData__name">
             <p>Mostafa Ahmed</p>
             <span>mostafa_ahmed</span>
           </div>
-        </Link>
+
+          <Link to="/settings" className="settingsLink">
+            <MdSettings />
+
+          </Link>
+        </div>
       </div>
 
       <div className="sideNavbarLinks">
@@ -44,6 +55,7 @@ export default function SideNavbar() {
             <div></div>
             <span>Videos</span>
           </Link>
+
         </div>
 
         <h4 className="navSubheadingLink">Communities</h4>

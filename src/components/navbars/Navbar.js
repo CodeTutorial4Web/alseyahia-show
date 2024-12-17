@@ -15,23 +15,31 @@ export default function Navbar() {
     >
       <Link to="/" className="logo">
         <img
-          src={require(".././.././assets/images/logo.png")}
+          src={require(".././.././assets/images/logo4.png")}
           alt="شعار السياحية"
         />
       </Link>
 
       <ul>
         <li>
-          <Link to="/about">من نحن</Link>
+          <a href="#about">About</a>
+        </li>
+
+
+        <li>
+          <a href="#advantages">Why Alseyahia</a>
         </li>
 
         <li>
-          <Link to="/latest-honors">احدث التكريمات</Link>
+          <a href="#partnersAndInvestors">Partners And Investors</a>
         </li>
 
         <li>
-          <Link to="/blog">المدونة</Link>
+          <a href="#blog">Blog</a>
         </li>
+
+
+
       </ul>
 
       <div

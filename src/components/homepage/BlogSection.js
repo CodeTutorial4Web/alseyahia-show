@@ -2,50 +2,58 @@ import ArticleItem from "../cards/ArticleItem";
 import Header from "../general/Header";
 
 export default function BlogSection() {
+  const articles = [
+    {
+      date: "20/12/2021",
+      title: "The Importance of Adhering to School Rules",
+      content:
+        "School rules are fundamental in organizing school life and ensuring the smooth operation of the educational process. At the First Official Languages Alseyahia School, students are encouraged to adhere to these rules, which contribute to providing a safe and motivating learning environment. Discipline and respect for rules foster a sense of responsibility among students, positively reflecting on their behavior and academic success.",
+    },
+    {
+      date: "12/2/2022",
+      title: "The Role of School Activities in Developing Students' Skills",
+      content:
+        "The First Official Languages Alseyahia School places great emphasis on school activities that help develop students' skills and broaden their horizons. Through sports, theater, and arts, students can discover their talents and refine their abilities. Participation in activities makes students more self-confident and open to others, enhancing their spirit of teamwork and collaboration.",
+    },
+    {
+      date: "30/4/2023",
+      title: "Technology in Education",
+      content:
+        "In its quest to keep up with technological advancements, the First Official Languages Alseyahia School utilizes modern educational tools, including computers, smart screens, and diverse educational programs. Technology enables students to access new sources of knowledge and facilitates interactive learning, making lessons more enjoyable and beneficial.",
+    },
+    {
+      date: "12/5/2023",
+      title: "How Does Reading Enrich a Student's Culture?",
+      content:
+        "The First Official Languages Alseyahia School encourages its students to read as an important means of acquiring knowledge and broadening their horizons. Reading not only provides students with information but also develops their critical and creative thinking skills. It helps improve language and expression skills as well. Allocating time for daily reading is an essential part of educational activities that contribute to shaping the student's personality.",
+    },
+    {
+      date: "15/3/2024",
+      title: "The Importance of Attending Support Classes",
+      content:
+        "To support students academically, the First Official Languages Alseyahia School offers additional support classes in various subjects for students who need extra help. These classes enhance the student's academic level and strengthen their abilities in challenging subjects, improving their results and boosting their self-confidence. Students and parents are encouraged to take advantage of these classes for maximum educational benefit.",
+    },
+    {
+      date: "12/10/2024",
+      title: "Maintaining School Cleanliness is Everyone's Responsibility",
+      content:
+        "Cleanliness is an integral part of positive student behavior. At the First Official Languages Alseyahia School, students are encouraged to care for the cleanliness of their classrooms and playgrounds. Maintaining a clean environment reflects everyone's concern for the school's welfare and promotes a sense of responsibility. Awareness campaigns are conducted in the school to teach students the importance of cleanliness and ways to maintain the school environment, aiming to create a healthy and safe atmosphere for all.",
+    },
+  ];
 
-
-    const articles = [
-        {
-          date: "20/12/2021",
-          title: "أهمية الالتزام بالقوانين المدرسية",
-          content: "تُعدّ القوانين المدرسية أساسًا في تنظيم الحياة المدرسية وضمان سير العملية التعليمية بسلاسة. في مدرسة القرية السياحية الأولى، يُشجَّع الطلاب على الالتزام بهذه القوانين التي تساهم في توفير بيئة تعليمية آمنة ومحفزة للتعلم. إن الانضباط واحترام القواعد يُسهمان في تعزيز روح المسؤولية لدى الطلاب، مما ينعكس إيجابيًا على سلوكهم وتفوقهم الدراسي."
-        },
-        {
-          date: "12/2/2022",
-          title: "دور الأنشطة المدرسية في تنمية مهارات الطلاب",
-          content: "تُولي مدرسة القرية السياحية الأولى اهتمامًا كبيرًا بالأنشطة المدرسية التي تُسهم في تطوير مهارات الطلاب وتوسيع آفاقهم. فمن خلال الرياضة، والمسرح، والفنون، يتمكن الطلاب من اكتشاف مواهبهم وصقل مهاراتهم. إن مشاركة الطلاب في الأنشطة تجعلهم أكثر ثقة بأنفسهم وأكثر انفتاحًا على الآخرين، مما يعزز روح التعاون والعمل الجماعي لديهم."
-        },
-
-        {
-          date: "30/4/2023",
-          title: "التكنولوجيا في خدمة التعليم",
-          content: "في إطار سعيها لمواكبة التطور التكنولوجي، تقوم مدرسة القرية السياحية الأولى باستخدام وسائل تعليمية حديثة، تشمل أجهزة الكمبيوتر، والشاشات الذكية، والبرامج التعليمية المتنوعة. تُمكّن التكنولوجيا الطلاب من الوصول إلى مصادر معرفة جديدة وتسهيل عملية التعلم التفاعلي، ما يجعل الحصص الدراسية أكثر متعة وإفادة."
-        },
-        {
-          date: "12/5/2023",
-          title: "كيف تعزز القراءة ثقافة الطالب؟",
-          content: "تُشجِّع مدرسة القرية السياحية الأولى طلابها على القراءة باعتبارها وسيلة مهمة لاكتساب المعرفة وتوسيع آفاقهم. إن القراءة لا تُضيف للطلاب معلومات فقط، بل تطور مهارات التفكير النقدي والإبداعي لديهم. كما أنها تُساعد في تحسين مهارات اللغة والتعبير. ويُعد تخصيص وقت للقراءة اليومية جزءًا أساسيًا من الأنشطة التعليمية التي تساهم في تنمية شخصية الطالب."
-        },
-        {
-          date: "15/3/2024",
-          title: "أهمية حضور حصص التقوية",
-          content: "حرصًا على دعم الطلاب أكاديميًا، تقدم مدرسة القرية السياحية الأولى حصص تقوية إضافية في مواد مختلفة للطلاب الذين يحتاجون إلى دعم إضافي. تسهم هذه الحصص في رفع مستوى الطالب الأكاديمي وتعزيز قدراته في المواد التي يجد فيها صعوبة، مما يساهم في تحسين نتائجه وزيادة ثقته بنفسه. يُشجَّع الطلاب وأولياء الأمور على الاستفادة من هذه الحصص لتحقيق أقصى استفادة تعليمية."
-        },
-        {
-          date: "12/10/2024",
-          title: "الحفاظ على نظافة المدرسة مسؤولية الجميع",
-          content: "تعتبر النظافة جزءًا لا يتجزأ من سلوك الطالب الإيجابي، وفي مدرسة القرية السياحية الأولى، يُشجَّع الطلاب على الاهتمام بنظافة فصولهم وساحاتهم. إن الحفاظ على بيئة نظيفة يعكس حرص الجميع على رفاهية المدرسة ويعزز روح المسؤولية. وتُقدَّم حملات توعوية في المدرسة لتعليم الطلاب أهمية النظافة وطرق الحفاظ على البيئة المدرسية، بهدف تهيئة جو صحي وآمن للجميع."
-        }
-      ];
-
-      
   return (
-    <section className="homepageSection blogSection m-top p-inline">
-      <Header text="المدونة" />
+    <section id="blog" className="homepageSection blogSection m-top p-inline">
+      <Header text="Blog" />
 
       <div className="blog__grid">
-        
-        {articles.map((article, index) => <ArticleItem  key={index} title={article.title} content={article.content} date={article.date}/>)}
+        {articles.map((article, index) => (
+          <ArticleItem
+            key={index}
+            title={article.title}
+            content={article.content}
+            date={article.date}
+          />
+        ))}
       </div>
     </section>
   );

@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 
 
 export default function CommunityPreview({ communityGrade, communityChannels }) {
-    let grade = "Not Linksted";
+  let grade = "Not Linksted";
 
-    const [show, setShow] = useState(false);
- // grades loop
- switch (communityGrade) {
+  const [show, setShow] = useState(false);
+  // grades loop
+  switch (communityGrade) {
 
     case 1:
       grade = "Prim. 1";
@@ -60,16 +60,16 @@ export default function CommunityPreview({ communityGrade, communityChannels }) 
   }
 
   return (
-    <div className="communityDropdown">
+    <div className={show ? "communityDropdown show" : "communityDropdown"}>
       <h3
         onClick={() => {
           setShow(!show);
         }}
       >
-        {grade} <BiChevronDown />
+        {grade} <span className="chervon"><BiChevronDown /></span>
       </h3>
 
-      <ul className={show ? "communityMenu show" : "communityMenu"}>
+      <ul className="communityMenu">
         <li><Link to="/community/12/general"><span>🌐</span>General</Link></li>
         <li><Link to="/community/12/students"><span>🎓</span>Students</Link></li>
         <li><Link to="/community/12/announcements"><span>📢</span>Announcements</Link></li>

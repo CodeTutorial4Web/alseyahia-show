@@ -10,8 +10,8 @@ const INITIAL_STATE = {
         : JSON.parse(sessionStorage.getItem("userData")).accessToken,
     user:
       JSON.parse(sessionStorage.getItem("userData")) == null
-        ? 
-        {user: "user"}
+        ?
+        null
         : JSON.parse(sessionStorage.getItem("userData")).user,
   },
   isFetching: false,
@@ -21,13 +21,13 @@ const INITIAL_STATE = {
 export const AuthContext = createContext(INITIAL_STATE);
 
 
- const AuthContextProvider = ({children}) => {
+const AuthContextProvider = ({ children }) => {
 
   const [state, dispatch] = useReducer(
     AuthReducer,
     INITIAL_STATE
-    
-);
+
+  );
 
   return (
     <AuthContext.Provider
@@ -38,7 +38,7 @@ export const AuthContext = createContext(INITIAL_STATE);
         dispatch,
       }}
     >
-        {children}
+      {children}
 
     </AuthContext.Provider>
   );

@@ -1,0 +1,376 @@
+@import url(main.css);
+
+
+.settingsSection {
+    width: 100%;
+    padding: 2rem 2rem;
+    direction: ltr;
+}
+
+.profile-settings {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 1rem;
+    padding: 2rem 0;
+    position: relative;
+    border-bottom: 1px solid var(--dark-gray-color);
+    margin-bottom: 1rem;
+}
+
+.userAvatar {
+    position: relative;
+}
+
+
+.userAvatar:hover .changeAvatarBtn {
+    opacity: 1;
+}
+
+.userAvatar .changeAvatarBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100% - 1rem);
+    height: calc(100% - 1rem);
+    border: 0;
+    color: var(--theme-color);
+    font-family: "Mulish", sans-serif;
+    border-radius: .5rem;
+    opacity: 0;
+    transition: var(--basic-transition);
+    cursor: pointer;
+}
+
+.userAvatar .changeAvatarBtn i {
+    font-size: 3rem;
+}
+
+.profile-settings .displayname-desc {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.profile-settings .displayname-desc label {
+    font-size: .7rem;
+    color: var(--gray-color);
+}
+
+.profile-settings .displayname-desc label[for="userDesc"] {
+    margin-top: .5rem;
+}
+
+.profile-settings .displayname-desc .displayname {
+    font-size: 2rem;
+    outline: none;
+    font-weight: 900;
+    border: 1px solid transparent;
+
+}
+
+.profile-settings .displayname-desc .userDesc {
+    font-size: .8rem;
+    font-weight: 700;
+    outline: none;
+    border: 1px solid transparent;
+    text-overflow: clip;
+    word-break: break-all;
+    width: 100%;
+    height: 77px;
+    resize: none;
+}
+
+.profile-settings .displayname-desc .userDesc,
+.profile-settings .displayname-desc .displayname {
+    padding: .3rem .5rem;
+    border-radius: .5rem;
+    margin-top: .1rem;
+    background: none;
+    color: var(--theme-color);
+}
+
+.profile-settings .displayname-desc .userDesc:hover,
+.profile-settings .displayname-desc .displayname:hover,
+.profile-settings .displayname-desc .displayname:focus,
+.profile-settings .displayname-desc .userDesc:focus {
+    border-color: var(--dark-gray-color);
+}
+
+.profile-settings .saveBtn {
+    background: var(--card-bg);
+    padding: .5rem 1rem;
+    color: var(--main-color);
+    border: 1px solid transparent;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: var(--basic-transition);
+    font-size: .9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .2rem;
+    position: absolute;
+    top: 2rem;
+    right: 0;
+}
+
+.profile-settings .saveBtn:disabled {
+    border-color: transparent;
+    color: var(--dark-gray-color);
+    cursor: not-allowed;
+}
+
+.profile-settings .saveBtn {
+    border-color: var(--main-color);
+
+}
+
+
+/* ======== Enable Private Chat ======== */
+
+
+.enablePrivateChat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: var(--card-bg);
+    padding: .7rem 1rem;
+    border-radius: .5rem;
+}
+
+.enablePrivateChat-text {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+
+}
+
+
+.enablePrivateChat-text p {
+    font-size: .8rem;
+    color: var(--gray-color);
+    width: 80%;
+}
+
+
+/*  switch  */
+
+
+.switch {
+    min-width: 60px;
+    height: 30px;
+    border-radius: .5rem;
+    background: var(--bg-color);
+    position: relative;
+    padding: 4px;
+}
+
+
+.switch .switch-slider {
+    width: calc(30px - 8px);
+    height: calc(30px - 8px);
+    position: absolute;
+    left: 5px;
+    top: 4px;
+    background: var(--dark-gray-color);
+    border-radius: .5rem;
+    transition: var(--basic-transition);
+}
+
+
+.switch.enabled {
+    background: var(--bg-color-2);
+}
+
+.switch.enabled .switch-slider {
+    left: calc(60px - (30px - 8px) - 4px);
+    background: var(--main-color);
+}
+
+.switch input {
+    scale: 0;
+    opacity: 0;
+}
+
+
+
+/* Themes */
+
+
+.themesContainer-wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+    margin: 2rem 0;
+    padding-bottom: 2rem;
+}
+
+.themesContainer-wrapper .explan {
+    font-size: .8rem;
+    color: var(--gray-color);
+}
+
+.themesContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.theme__box {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    background: var(--card-bg);
+    padding: .7rem;
+    border-radius: .5rem;
+    gap: .5rem;
+    border: 1px solid transparent;
+    transition: var(--basic-transition);
+}
+
+.theme__box.active {
+    border-color: var(--main-color);
+    position: relative;
+}
+
+.theme__box.active::after {
+
+    content: "";
+    position: absolute;
+    bottom: .3rem;
+    right: .3rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: var(--main-color);
+}
+
+
+.theme__box p {
+    font-size: 1rem;
+}
+
+.theme__box label {
+    margin-top: .5rem;
+    font-size: .8rem;
+}
+
+.theme__box-colors {
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+    width: 100%;
+}
+
+.theme__box-color {
+    width: 30px;
+    height: 30px;
+    border-radius: .5rem;
+    background: var(--bg-color-2);
+    border: 1px solid var(--dark-gray-color);
+}
+
+.theme__box-preview {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    background: var(--bg-color);
+    height: 180px;
+}
+
+.sideNavbarPreview {
+    width: 25%;
+    background: var(--navbar-bg);
+    height: 100%;
+}
+
+.theme__box-preview .dashboardSection {
+    height: 100%;
+    gap: .5rem;
+    padding: .5rem;
+}
+
+
+/*  themes adjustments  */
+
+
+
+/*   Theme one (default) */
+
+.theme__box.theme1 .theme__box-preview,
+.theme__box.theme1 .theme__box-colors .theme__box-color:nth-child(1) {
+    background: var(--theme1-bg-color);
+}
+
+.theme__box.theme1 .dashboardSection>div,
+.theme__box.theme1 .theme__box-colors .theme__box-color:nth-child(2) {
+    background: var(--theme1-card-bg);
+}
+
+.theme__box.theme1 .sideNavbarPreview,
+.theme__box.theme1 .theme__box-colors .theme__box-color:nth-child(3) {
+    background: var(--theme1-navbar-bg);
+}
+
+.theme__box.theme1 .theme__box-colors .theme__box-color:nth-child(4) {
+    background: var(--theme1-bg-color-2);
+}
+
+
+/*  Theme two  */
+.theme__box.theme2 .theme__box-preview,
+.theme__box.theme2 .theme__box-colors .theme__box-color:nth-child(1) {
+    background: var(--theme2-bg-color);
+}
+
+.theme__box.theme2 .dashboardSection>div,
+.theme__box.theme2 .theme__box-colors .theme__box-color:nth-child(2) {
+    background: var(--theme2-card-bg);
+}
+
+.theme__box.theme2 .sideNavbarPreview,
+.theme__box.theme2 .theme__box-colors .theme__box-color:nth-child(3) {
+    background: var(--theme2-navbar-bg);
+}
+
+.theme__box.theme2 .theme__box-colors .theme__box-color:nth-child(4) {
+    background: var(--theme2-bg-color-2);
+}
+
+
+/*  Theme three  */
+.theme__box.theme3 .theme__box-preview,
+.theme__box.theme3 .theme__box-colors .theme__box-color:nth-child(1) {
+    background: var(--theme3-bg-color);
+}
+
+.theme__box.theme3 .dashboardSection>div,
+.theme__box.theme3 .theme__box-colors .theme__box-color:nth-child(2) {
+    background: var(--theme3-card-bg);
+}
+
+.theme__box.theme3 .sideNavbarPreview,
+.theme__box.theme3 .theme__box-colors .theme__box-color:nth-child(3) {
+    background: var(--theme3-navbar-bg);
+}
+
+.theme__box.theme3 .theme__box-colors .theme__box-color:nth-child(4) {
+    background: var(--theme3-bg-color-2);
+}

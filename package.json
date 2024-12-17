@@ -21,6 +21,7 @@
     "react-router-dom": "^6.27.0",
     "react-scripts": "5.0.1",
     "react-share": "^5.1.1",
+    "react-sweetalert2": "^0.6.0",
     "simplebar": "^6.2.7",
     "simplebar-react": "^3.2.6",
     "web-vitals": "^2.1.4"

@@ -12,7 +12,7 @@ export default function UserAvatar({ scale, avatarImage }) {
         minWidth: `calc(3rem * ${scale})`,
         maxHeight: `calc(3rem * ${scale})`,
         maxWidth: `calc(3rem * ${scale})`,
-        borderRadius: ".3rem",
+        borderRadius: ".5rem",
         backgroundColor: "#222",
       }}
     ></div>

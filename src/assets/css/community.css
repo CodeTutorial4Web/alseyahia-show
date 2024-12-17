@@ -64,10 +64,9 @@
     justify-content: center;
     align-items: center;
 }
-.communitySection .community .createPost:hover .text i,
-.communitySection .community .createPost:hover .text span
 
-{
+.communitySection .community .createPost:hover .text i,
+.communitySection .community .createPost:hover .text span {
     color: var(--main-color);
 }
 
@@ -181,7 +180,7 @@
     cursor: pointer;
 }
 
-.communitySection .community .postsGrid .postsGrid__item .postsGrid__item__userData {
+.postsGrid__item__userData {
     display: flex;
     justify-content: start;
     align-items: start;
@@ -191,25 +190,25 @@
     border-radius: .5rem;
 }
 
-.communitySection .community .postsGrid .postsGrid__item .postsGrid__item__userData .userName {
+.postsGrid__item__userData .userName {
     display: flex;
     flex-direction: column;
 }
 
-.communitySection .community .postsGrid .postsGrid__item .postsGrid__item__userData p {
+.postsGrid__item__userData p {
     font-size: 1rem;
     color: var(--text-color);
     font-weight: 700;
 }
 
-.communitySection .community .postsGrid .postsGrid__item .postsGrid__item__userData ul {
+.postsGrid__item__userData ul {
     font-size: .8rem;
     color: var(--gray-color);
     display: flex;
     gap: 1.8rem;
 }
 
-.communitySection .community .postsGrid .postsGrid__item .postsGrid__item__userData li:nth-child(1) {
+.postsGrid__item__userData li:nth-child(1) {
     list-style: none;
 }
 
@@ -232,7 +231,7 @@
 
 
 .communitySection .community .postsGrid .postsGrid__item .postsGrid__item__image {
-    width: 100%;    
+    width: 100%;
     aspect-ratio: 16 / 9;
     background-position: center;
     background-size: cover;
@@ -314,7 +313,7 @@
     height: 0;
     overflow: hidden;
     transition: var(--basic-transition);
-    
+
 }
 
 .postsGrid__item__comments.show {
@@ -323,7 +322,7 @@
     height: 65.889vh;
 }
 
- .createComment {
+.createComment {
     display: flex;
     width: 100%;
     gap: .5rem;
@@ -343,11 +342,11 @@
     overflow-y: scroll;
 }
 
- .createComment > div {
+.createComment>div {
     margin-right: 1rem;
 }
 
- .createComment input {
+.createComment input {
     width: 100%;
     padding: .5rem 1rem;
     background: var(--card-bg);
@@ -358,8 +357,8 @@
     transition: var(--basic-transition);
 }
 
- .createComment button {
-    
+.createComment button {
+
     border-radius: .5rem;
     border: none;
     background: var(--card-bg);
@@ -371,44 +370,44 @@
 }
 
 
- .createComment button:hover {
+.createComment button:hover {
     border-color: var(--main-color);
 }
 
- .createComment input::placeholder {
+.createComment input::placeholder {
     font-family: "Mulish", sans-serif;
 }
 
- .createComment input:focus {
+.createComment input:focus {
     border-color: var(--main-color);
 
 }
 
- .commentCard {
+.commentCard {
     display: flex;
     justify-content: start;
     align-items: start;
     flex-direction: column;
 }
 
- .commentCard .userData {
+.commentCard .userData {
     display: flex;
     align-items: center;
     gap: .5rem;
 }
 
- .commentCard .userData span {
+.commentCard .userData span {
     font-weight: 900;
     font-size: 1rem;
 }
 
- .commentCard p {
+.commentCard p {
     font-size: .8rem;
     color: var(--gray-color);
     margin-top: .3rem;
 }
 
- .commentCard .commentsControlls {
+.commentCard .commentsControlls {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -417,12 +416,12 @@
     width: 100%;
 }
 
- .commentCard .commentsControlls div {
+.commentCard .commentsControlls div {
     display: flex;
     gap: 1rem;
 }
 
- .commentCard .commentsControlls button {
+.commentCard .commentsControlls button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -435,22 +434,22 @@
     transition: var(--basic-transition);
 }
 
- .commentCard .commentsControlls button:hover {
+.commentCard .commentsControlls button:hover {
 
     color: var(--text-color);
 
 }
 
- .commentCard .commentsControlls span {
+.commentCard .commentsControlls span {
     font-size: .8rem;
 }
 
 
- .commentCard .repliesBtn {
+.commentCard .repliesBtn {
     cursor: pointer;
 }
 
- .commentCard.reply {
+.commentCard.reply {
     margin-left: 3rem;
 }
 
@@ -466,7 +465,7 @@
 
 .commentsGrid.reply.show {
     height: 70vh;
-    padding: 1rem 1rem 2rem 0  ;
+    padding: 1rem 1rem 2rem 0;
     padding-bottom: 3rem;
     overflow-y: scroll;
 
@@ -598,16 +597,15 @@
 
     .communitySection .community .postsGrid .postsGrid__item {
         border-radius: 0;
-     }
+    }
 
-     .communitySection .community .createPost {
+    .communitySection .community .createPost {
         margin: 0 1rem 0 1rem;
-     }
+    }
 
-.communitySection .community .postsGrid .postsGrid__item .dropdown {
-    right: 1.5rem;
+    .communitySection .community .postsGrid .postsGrid__item .dropdown {
+        right: 1.5rem;
+    }
+
+
 }
-
-
-}
-

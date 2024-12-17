@@ -4,12 +4,12 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/Home.page";
 import Footer from "./components/general/Footer";
-import TermsOfService from "./pages/TermsOfServiece";
-import Register from "./pages/Register";
-import Login from "./pages/Login";
-import CommunityPage from "./pages/CommunityPage";
+import TermsOfService from "./pages/TermsOfServiece.page";
+import Register from "./pages/Register.page";
+import Login from "./pages/Login.page";
+import CommunityPage from "./pages/Community.page";
 import { AuthContext } from "./authContext/AuthContext";
 import { useContext } from "react";
 import Videos from "./components/community/Videos";
@@ -17,17 +17,35 @@ import Community from "./components/community/CommunitySection";
 import DashboardSection from "./components/community/DashboardSection";
 import Notifications from "./components/community/Notifications";
 import Shop from "./components/community/Shop";
-import CreateVideo from "./pages/CreateVideo";
+import CreateVideo from "./pages/CreateVideo.page";
 import Conversation from "./components/community/Conversation";
 import VideoPreview from "./components/community/VideoSection";
+import ProfileSection from "./components/community/ProfileSection";
+import LoadingScreen from "./components/general/LoadingScreen";
+import ShopItemSection from './components/community/ShopItemSection';
+import SettingsSection from "./components/community/SettingsSection";
+
 
 function App() {
   const { user } = useContext(AuthContext).userData;
+  const setTheme = (theme) => {
+    document.body.className = theme
+  };
 
+
+  if (localStorage.getItem("theme") == null) {
+    setTheme("mainColor");
+  } else {
+    setTheme(localStorage.getItem("theme"));
+  }
   return (
     <div className="App">
       <Router>
+
+
+
         <Routes>
+
           <Route
             path="/"
             exact
@@ -36,19 +54,24 @@ function App() {
             <Route path="/videos" exact element={<Videos />} />
             <Route path="/" exact element={<DashboardSection />} />
             <Route path="/conversation/:id" exact element={<Conversation />} />
-            <Route path="/shop" element={<Shop />} />
+            <Route path="/shop" exact element={<Shop />} />
+            <Route path="/shop/:id" exact element={<ShopItemSection />} />
+            <Route path="/settings" exact element={<SettingsSection />} />
+
 
             <Route
               path="/notifications"
               exact
-              element={user ? <Notifications /> : <Login />}
+              element={<Notifications />}
             />
 
             <Route
               path="/video/:videoId"
               exact
-              element={user ? <VideoPreview /> : <Login />}
+              element={<VideoPreview />}
             />
+
+            <Route path="/profile/:username" exact element={<ProfileSection />} />
 
             <Route
               path="/community/:communityId/:channelName"
@@ -73,7 +96,6 @@ function App() {
           />
           <Route path="/terms-of-service" exact element={<TermsOfService />} />
         </Routes>
-
       </Router>
     </div>
   );

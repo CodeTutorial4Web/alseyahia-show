@@ -2,51 +2,50 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-col">
-          <h3>المدرسة</h3>
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-col">
+          <h3>Company</h3>
           <ul>
             <li>
-              <Link>من نحن</Link>
+              <Link>About Us</Link>
             </li>
             <li>
-              <Link>الوظائف</Link>
+              <Link>Careers</Link>
             </li>
             <li>
-              <Link to="/terms-of-service">سياسة الخصوصية</Link>
+              <Link to="/terms-of-service">Privacy Policy</Link>
             </li>
             <li>
-              <Link>شروط الخدمة</Link>
+              <Link>Terms of Service</Link>
             </li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h3>الدعم</h3>
+        <div className="footer-col">
+          <h3>Support</h3>
           <ul>
             <li>
-              <Link>مركز المساعدة</Link>
+              <Link>Help Center</Link>
             </li>
             <li>
-              <Link>الأسئلة الشائعة</Link>
+              <Link>FAQ</Link>
             </li>
             <li>
-              <Link>تواصل معنا</Link>
+              <Link>Contact Us</Link>
             </li>
           </ul>
         </div>
-        <div class="footer-col footer-about">
-          <img src={require(".././../assets/images/logo.png")} />
-          <h3>القرية السياحية</h3>
+        <div className="footer-col footer-about">
+          <img src={require(".././../assets/images/logo.png")} alt="Logo" />
+          <h3>Alseyahia</h3>
           <p>
-          مدرسة القرية السياحية الأولى الرسمية للغات هي مؤسسة تعليمية تقع في
-          منطقة السادس من أكتوبر بمصر. تتميز المدرسة بتركيزها على تقديم تعليم
-          عالي الجودة باللغة الإنجليزية، بجانب اللغات الأخرى كالفرنسية والعربية.
+            The Official First Languages Alseyahia School is an educational institution located in 6th of October City, Egypt.
+            The school is known for its focus on providing high-quality education in English, alongside other languages like French and Arabic.
           </p>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 القرية السياحية. جميع الحقوق محفوظة.</p>
+      <div className="footer-bottom">
+        <p>&copy; 2024 Tourism Village. All rights reserved.</p>
       </div>
     </footer>
   );

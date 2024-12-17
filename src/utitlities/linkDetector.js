@@ -4,6 +4,7 @@ const urlRegex = /\b((https?:\/\/)?((www\.)?([a-zA-Z0-9-]+(\.[a-zA-Z]{2,})+)([\/
 
 
 export const makeClickable = (text) => {
+
   return text.split(" ").map((word, index) => {
     if (urlRegex.test(word)) {
       return (

@@ -1,10 +1,9 @@
 import Header from "../components/general/Header";
 import ".././assets/css/forms.css";
-import Btn from './../components/general/Btn';
+import Btn from "../components/general/Btn";
 import { Link } from "react-router-dom";
 
 export default function Register() {
-
   function formSubmit(e) {
     e.preventDefault();
   }
@@ -68,7 +67,9 @@ export default function Register() {
 
         <div className="form__group">
           <Btn hov="hov3" text="Register" />
-          <p>Already have an account? <Link to="/login">Login</Link></p>
+          <p>
+            Already have an account? <Link to="/login">Login</Link>
+          </p>
         </div>
       </form>
     </main>

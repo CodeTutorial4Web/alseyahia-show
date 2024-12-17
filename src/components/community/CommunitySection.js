@@ -12,7 +12,7 @@ export default function Community() {
   return (
     <section className="communitySection">
       <div className="community">
-      <CreatePost />
+        <CreatePost />
 
         <div className="postsGrid">
           <PostItem
@@ -30,7 +30,7 @@ export default function Community() {
             }
           />
 
-<PostItem
+          <PostItem
             title={"hello"}
             user={{
               userFullname: "Mostafa Ahmed",
@@ -41,12 +41,12 @@ export default function Community() {
               "https://corporate.walmart.com/content/dam/corporate/images/global-responsibility/sustainability/planet/nature/businessfornature-banner.png"
             }
             text={
-              "Deserunt consequat deserunt commodo est. Minim laborum fugiat dolore cillum cupidatat eiusmod ullamco consequat est non pariatur incididunt sint sunt. Excepteur consequat occaecat do ea tempor. Eu esse do sit in labore enim laborum officia anim voluptate nostrud. Officia veniam cillum eiusmod voluptate nulla voluptate quis ad. Irure dolor nisi amet aliquip."
+              "Deserunt consequat deserunt commodo #holiday est. Minim laborum fugiat dolore cillum cupidatat eiusmod ullamco consequat est non pariatur incididunt sint sunt. Excepteur consequat occaecat do ea tempor. Eu esse do sit in labore enim laborum officia anim voluptate nostrud. Officia veniam cillum eiusmod voluptate nulla voluptate quis ad. Irure dolor nisi amet aliquip."
             }
           />
 
 
-<PostItem
+          <PostItem
             title={"hello"}
             user={{
               userFullname: "Mostafa Ahmed",

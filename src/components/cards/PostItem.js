@@ -18,6 +18,7 @@ import moment from "moment";
 import { Link } from "react-router-dom";
 import UserAvatar from "./../general/UserAvatar";
 import CommentCard from './CommentCard';
+import { makeHashtag } from './../../utitlities/hashTags';
 
 export default function PostItem({
   title,
@@ -55,14 +56,14 @@ export default function PostItem({
     e.preventDefault()
   }
 
-  function scrollToInput (){
+  function scrollToInput() {
     if (commentInput.current) {
-        setTimeout(() => {
-          commentInput.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 300);
-      }
-        
- 
+      setTimeout(() => {
+        commentInput.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 300);
+    }
+
+
   };
 
 
@@ -112,14 +113,14 @@ export default function PostItem({
         <h3>{title && title}</h3>
 
         {showMore ? (
-          <p>{makeClickable(text)} <span
-          onClick={() => {
-            setShowMore(!showMore);
-          }}
-          className="showMore"
-        >
-           show less
-        </span></p>
+          <p>{makeHashtag(makeClickable, text)} <span
+            onClick={() => {
+              setShowMore(!showMore);
+            }}
+            className="showMore"
+          >
+            show less
+          </span></p>
         ) : (
           <p>
             {text.length > 160 ? (
@@ -189,7 +190,7 @@ export default function PostItem({
           </span>
           <span onClick={() => {
             setShowComments(!showComments)
-          }} style={{cursor: "pointer"}}>
+          }} style={{ cursor: "pointer" }}>
             <b>12</b> comments
           </span>
         </div>
@@ -198,14 +199,14 @@ export default function PostItem({
 
       <div className={showComments ? "postsGrid__item__comments show" : "postsGrid__item__comments"}>
         <form className="createComment" onSubmit={handleComment}>
-            <UserAvatar scale={.8} avatarImage={""}/>
-            <input type="text" ref={commentInput} placeholder="Type your comment..."/>
-            <button><BiPaperPlane /></button>
+          <UserAvatar scale={.8} avatarImage={""} />
+          <input type="text" ref={commentInput} placeholder="Type your comment..." />
+          <button><BiPaperPlane /></button>
         </form>
         <div className="commentsGrid">
-            <CommentCard inputRef={commentInput}/>
-            <CommentCard inputRef={commentInput}/>
-            <CommentCard inputRef={commentInput}/>
+          <CommentCard inputRef={commentInput} />
+          <CommentCard inputRef={commentInput} />
+          <CommentCard inputRef={commentInput} />
         </div>
       </div>
     </div>

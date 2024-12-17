@@ -1,12 +1,15 @@
 import { useState } from "react";
-import { BiCart, BiDotsHorizontalRounded,  BiCopy,
+import {
+  BiCart, BiDotsHorizontalRounded, BiCopy,
   BiEdit,
   BiShare,
   BiTrash,
-  BiBookmark, } from "react-icons/bi";
+  BiBookmark,
+  BiSolidStar,
+} from "react-icons/bi";
 import { Link } from "react-router-dom";
 
-export default function ShopItem({image, title, desc, price}) {
+export default function ShopItem({ image, title, desc, price }) {
 
 
   // use states
@@ -15,23 +18,23 @@ export default function ShopItem({image, title, desc, price}) {
 
   return (
     <div className="shopItem">
-        <div className="menu">
-            <button      onClick={() => {
+      <div className="menu">
+        <button onClick={() => {
           setShowDropdown(!showDropdown);
-        }}className="dots">
-                <BiDotsHorizontalRounded />
-            </button>
+        }} className="dots">
+          <BiDotsHorizontalRounded />
+        </button>
 
-            <div className={showDropdown ? "dropdown show" : "dropdown"}>
-        <span className="share">
-          <BiShare /> <b>Share</b>
-        </span>
+        <div className={showDropdown ? "dropdown show" : "dropdown"}>
+          <span className="share">
+            <BiShare /> <b>Share</b>
+          </span>
 
-        <span className="copy">
-          <BiBookmark /> <b>Save</b>
-        </span>
-      </div>
+          <span className="copy">
+            <BiBookmark /> <b>Save</b>
+          </span>
         </div>
+      </div>
 
 
 
@@ -42,21 +45,29 @@ export default function ShopItem({image, title, desc, price}) {
         }}
       ></div>
 
-      <Link to="/product/12" className="shopItem__content">
+      <Link to="/shop/12" className="shopItem__content">
         <b className="shopItem__title">{title}</b>
         <p className="shopItem__desc">
           {desc.length > 100 ? desc.slice(0, 100) + "..." : desc}
         </p>
 
-       
+
       </Link>
 
       <div className="shopItem__priceAddToCart">
-            <span>{price} <i>Points</i></span>
-            <button>
-                <BiCart />
-            </button>
-        </div>
+        <span>{price} <i>Points</i></span>
+        <button>
+          <BiCart />
+        </button>
+      </div>
+
+      <div className="reviewStars">
+
+        <BiSolidStar />
+        <BiSolidStar />
+        <BiSolidStar />
+        <BiSolidStar />
+      </div>
     </div>
   );
 }

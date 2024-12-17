@@ -1,36 +1,39 @@
 import Header from "../general/Header";
 import ".././../assets/css/homepage.css";
-
+import { Link } from "react-router-dom";
+import { to } from 'moment/src/lib/moment/to';
 
 export default function AboutSection() {
   return (
-
-    <section className="homepageSection m-top aboutSection p-inline">
-
-        <Header text="من نحن"/>
+    <section id="about" className="homepageSection m-top aboutSection p-inline">
       <div className="aboutSection__content">
+        <Header text="About Us" />
 
 
         <p className="aboutSection__text">
-
-        مدرسة القرية السياحية الأولى الرسمية للغات هي مؤسسة تعليمية متكاملة تقع في منطقة السادس من أكتوبر بمصر، وتعد من المدارس الرائدة التي تهدف إلى تقديم مستوى تعليمي متقدم يعتمد على تعزيز المهارات اللغوية والمعرفية للطلاب في مختلف المراحل التعليمية. تهتم المدرسة بتدريس اللغة الإنجليزية كلغة أساسية إلى جانب اللغات الأخرى مثل الفرنسية والعربية، مما يتيح للطلاب امتلاك مهارات لغوية متعددة تساعدهم في التواصل العالمي وتعزز من فرصهم المستقبلية في التعليم والعمل.
-
-تُطبِّق المدرسة مناهج وزارة التربية والتعليم المصرية، مع إضافة مجموعة من الأنشطة اللاصفية والبرامج التعليمية التي تسهم في تنمية شخصية الطالب بشكل شامل. وتشمل هذه الأنشطة المجالات الرياضية والفنية والثقافية، مما يساعد في تطوير مهاراتهم الاجتماعية وتعزيز روح التعاون والعمل الجماعي بينهم. تركز المدرسة بشكل خاص على تفعيل دور الأنشطة العلمية والتجريبية التي تشجع الطلاب على الإبداع والابتكار، وتعمل على دعم مواهبهم وتوجيههم نحو الاهتمامات العلمية والأكاديمية.
-
-من الناحية التربوية، تولي المدرسة اهتماماً كبيراً لبناء جيل قادر على التفكير النقدي والتحليل، إذ تُنظَّم برامج خاصة تركز على تنمية هذه المهارات من خلال أساليب تدريس حديثة تعتمد على التفاعل والمشاركة الفعالة في الفصل. تسعى المدرسة أيضاً إلى غرس القيم الأخلاقية والوطنية في نفوس الطلاب، من خلال البرامج التربوية والأنشطة الاجتماعية التي تساهم في بناء شخصية مسؤولة وواعية بحقوقها وواجباتها تجاه المجتمع.
-
-بفضل بيئتها التعليمية الشاملة، وأعضاء هيئة التدريس المؤهلين، والإدارة الداعمة، تعتبر مدرسة القرية السياحية الأولى الرسمية للغات من بين أفضل الخيارات التعليمية التي تركز على إعداد جيل مؤهل أكاديميًا ومتميز اجتماعيًا، وقادر على مواجهة تحديات المستقبل بثقة وثبات.
-        
+          The First Official Languages Alseyahia School is a comprehensive
+          educational institution located in Sixth of October City, Egypt. It is
+          one of the leading schools aiming to provide an advanced level of education
+          focused on enhancing students' linguistic and cognitive skills across
+          various educational stages. The school emphasizes teaching English as the
+          primary language, alongside other languages such as French and Arabic, enabling
+          students to acquire multilingual skills that enhance their global communication
+          capabilities and future opportunities in education and work.
         </p>
 
-        <div className="aboutSection__image" style={{
-            backgroundImage: `url(https://egyptschools.info/wp-content/uploads/2020/12/917523377.jpg)`,
-          
+        <Link to="about" className="link">Read more</Link>
 
-        }}></div>
+        <div className="socialMedia">
 
-       </div> 
+        </div>
+      </div>
+
+      <div
+        className="aboutSection__image"
+        style={{
+          backgroundImage: `url(https://i0.wp.com/abralbilad.com/wp-content/uploads/2022/07/%D9%A2%D9%A0%D9%A1%D9%A5%D9%A1%D9%A2%D9%A1%D9%A6_%D9%A1%D9%A4%D9%A0%D9%A2%D9%A4%D9%A0.jpg?fit=2048%2C1232&ssl=1)`,
+        }}
+      ></div>
     </section>
-
   );
 }
