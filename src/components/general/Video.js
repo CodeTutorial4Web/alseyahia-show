@@ -104,7 +104,7 @@ export default function Video({ src }) {
       <video
         src={
           src == undefined || null
-            ? require(".././../assets/videos/video.mp4")
+            ? "https://videos.pexels.com/video-files/7944931/7944931-uhd_2732_1440_25fps.mp4"
             : src
         }
         ref={video}
