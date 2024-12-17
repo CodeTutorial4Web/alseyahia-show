@@ -104,7 +104,7 @@ export default function Video({ src }) {
       <video
         src={
           src == undefined || null
-            ? require(".././../assets/videos/video2.mp4")
+            ? require(".././../assets/videos/video.mp4")
             : src
         }
         ref={video}
