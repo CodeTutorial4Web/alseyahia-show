@@ -104,7 +104,7 @@ export default function Video({ src }) {
       <video
         src={
           src == undefined || null
-            ? require(".././../assets/videos/video1.mp4")
+            ? require(".././../assets/videos/video2.mp4")
             : src
         }
         ref={video}
@@ -214,12 +214,12 @@ export default function Video({ src }) {
                 currentSpeed == 1
                   ? "dropDown normal"
                   : currentSpeed == 1.5
-                  ? "dropDown speed1"
-                  : currentSpeed == 2
-                  ? "dropDown speed2"
-                  : currentSpeed == 0.5
-                  ? "dropDown slow1"
-                  : "dropDown slow2"
+                    ? "dropDown speed1"
+                    : currentSpeed == 2
+                      ? "dropDown speed2"
+                      : currentSpeed == 0.5
+                        ? "dropDown slow1"
+                        : "dropDown slow2"
               }
             >
               <li
