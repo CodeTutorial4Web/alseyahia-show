@@ -8,7 +8,7 @@ export const makeClickable = (text) => {
   return text.split(" ").map((word, index) => {
     if (urlRegex.test(word)) {
       return (
-        <a key={index} href={word} title="link" className="link" target="_blank" rel="noopener noreferrer">
+        <a key={index} href={word} title="link" className="postLink" target="_blank" rel="noopener noreferrer">
           {word}
         </a>
       );
