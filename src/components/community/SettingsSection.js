@@ -3,7 +3,7 @@ import UserAvatar from './../general/UserAvatar';
 import ".././../assets/css/settings.css"
 import { useEffect, useRef } from 'react';
 import { useState } from 'react';
-import { BiUser } from 'react-icons/bi';
+import { BiInfoCircle, BiSolidInfoCircle, BiUser } from 'react-icons/bi';
 import Header from './../general/Header';
 
 
@@ -13,7 +13,7 @@ export default function SettingsSection() {
 
 
     // useStates
-
+    const [showInfo, setShowInfo] = useState(false)
     const [disable, setDisable] = useState(true);
     const [enablePrivateChat, setEnablePrivateChat] = useState(false)
     const [currentTheme, setCurrentTheme] = useState(localStorage.getItem("theme") != null ? localStorage.getItem("theme") : "theme1");
@@ -86,7 +86,6 @@ export default function SettingsSection() {
 
         <section className="p-inline settingsSection">
             <div className="profile-settings">
-                <button disabled={disable} className="saveBtn"> save </button>
                 <div className="userAvatar">
                     <UserAvatar scale={3.5} avatarImage={""} />
 
@@ -124,13 +123,14 @@ export default function SettingsSection() {
                         }
                     }} spellCheck={false} defaultValue={"Culpa nisi occaecat irure voluptate voluptate cupidatat. Ex tempor eu anim officia officia consectetur do sunt est. Quis ut dolor reprehenderit reprehenderit cillum amet. Ea eu voluptate anim laborum irure. Qui enim tempor ea culpa."} className="userDesc" id="userDesc"></textarea>
 
+                    <button disabled={disable} className="saveBtn"> save </button>
 
                 </div>
             </div>
 
 
 
-            <div className="enablePrivateChat ">
+            <div className={showInfo ? "enablePrivateChat show" : "enablePrivateChat"} >
 
                 <div className="enablePrivateChat-text">
                     <h3>Enable private chats with students.</h3>
@@ -153,6 +153,10 @@ export default function SettingsSection() {
                         setEnablePrivateChat(!enablePrivateChat)
                     }} type="checkbox" id="privateChat" />
                 </div>
+
+                <i className="infoBtn" onClick={() => {
+                    setShowInfo(!showInfo);
+                }}><BiSolidInfoCircle /></i>
             </div>
 
 

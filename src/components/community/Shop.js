@@ -17,8 +17,6 @@ export default function Shop() {
         </div>
       </div>
 
-      <Header text="Awards Shop" />
-
       <div className="blog__grid">
         <ShopItem
           image={"https://pngimg.com/d/iphone_12_PNG23.png"}

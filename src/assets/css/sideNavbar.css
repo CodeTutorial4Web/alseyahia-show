@@ -98,23 +98,40 @@
     width: 100%;
 }
 
+
+.sideNavbar .sideNavbarLinks .navLink:nth-child(1) {
+    margin-top: calc(1rem - .3rem);
+}
+
 .sideNavbar .sideNavbarLinks .navLink {
-    padding: 1rem;
+    padding: .3rem;
     color: var(--text-color);
-    font-weight: 900;
-    background: var(--card-bg);
     width: 100%;
     position: relative;
     border-radius: .5rem;
     overflow: hidden;
+    display: flex;
+    justify-content: start;
+    gap: .5rem;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.sideNavbar .sideNavbarLinks .navLink i {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--basic-transition);
+
 }
 
 .sideNavbar .sideNavbarLinks .navLink span {
-    z-index: 9999999999;
-    position: relative;
-
     transition: var(--basic-transition);
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sideNavbar .sideNavbarLinks .navLink>div {
@@ -128,13 +145,16 @@
     transition: var(--basic-transition);
 }
 
-.sideNavbar .sideNavbarLinks .navLink:hover>div {
-    width: 100%;
+.sideNavbar .sideNavbarLinks .navLink:hover span {
+    color: var(--main-color);
+    margin-left: .5rem;
 }
 
-.sideNavbar .sideNavbarLinks .navLink:hover span {
-    color: var(--navbar-bg);
+.sideNavbar .sideNavbarLinks .navLink:hover i {
+    color: var(--main-color);
+    rotate: 10deg;
 }
+
 
 
 

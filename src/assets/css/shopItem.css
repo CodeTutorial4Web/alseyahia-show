@@ -296,3 +296,43 @@
     font-size: 1rem;
     color: gold;
 }
+
+
+@media screen and (max-width: 610px) {
+
+    .shopItemSection {
+        padding: 1rem !important;
+    }
+
+    .shopItemSection {
+        flex-direction: column-reverse;
+    }
+
+    .shopItemSection>div {
+        width: 100%;
+    }
+
+    .productSideInfo__content {
+        position: static;
+        padding-top: 1rem;
+    }
+
+    .shopItemSection .slider-list {
+        height: 30vh;
+    }
+
+    .productSideInfo__content .addToCart__btn {
+        width: fit-content;
+    }
+
+    .productDesc h2,
+    .productInformationTable h2,
+    .productReviews h2 {
+        font-size: 1.2rem;
+    }
+
+    .productDesc .description {
+        font-size: .8rem;
+    }
+
+}

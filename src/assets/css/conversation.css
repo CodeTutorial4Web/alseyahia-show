@@ -16,21 +16,23 @@
     align-items: stretch;
     flex-direction: column;
     position: relative;
-    padding-top: 4rem;
+    padding-top: 3.8rem;
+    padding-left: var(--sideNavbar-width);
+
 }
 
-.conversationSection .user {
+.conversationSection>.user {
     display: flex;
     justify-content: start;
     align-items: start;
     gap: .5rem;
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 999;
     background: var(--card-bg);
     padding: .7rem;
-    width: 100%;
+    width: calc(100% - var(--sideNavbar-width));
 }
 
 .conversationSection .user ul {
@@ -40,7 +42,7 @@
 
 
 
-.conversationSection .user ul li:nth-child(1){
+.conversationSection .user ul li:nth-child(1) {
     list-style: none;
 }
 
@@ -53,6 +55,7 @@
 .conversationSection .user span {
     font-size: .7rem;
 }
+
 .conversationSection .user b {
     font-size: .7rem;
 }
@@ -76,7 +79,7 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
-    gap: 3rem;
+    gap: 1rem;
     height: 100%;
     overflow-y: scroll;
     padding: 2rem 0;
@@ -165,7 +168,7 @@
 
 }
 
-.messageInput__picker .emojiPicker > div {
+.messageInput__picker .emojiPicker>div {
     position: absolute;
     bottom: 200%;
     right: 0;
@@ -209,19 +212,42 @@
     color: var(--text-color);
 
 }
+
 .createMessage .sendMessageForm button {
     border-radius: .5rem;
     border: none;
     background: var(--main-color);
-    padding: 1rem 1.1rem;
     color: var(--text-color);
     border: 1px solid transparent;
     cursor: pointer;
     transition: var(--basic-transition);
-    font-size: 1.1rem;
-    margin-left: 2rem;
+    font-size: 1.2rem;
+    margin-left: .5rem;
+    padding: 0 1rem;
 }
 
 .emojiPicker {
     position: relative;
+}
+
+
+
+@media screen and (max-width: 936px) {
+
+    .conversationSection .sideNavbar {
+        display: none;
+    }
+
+    .conversationSection {
+        padding-left: 0;
+    }
+
+    .conversationSection>.user {
+        width: 100%;
+    }
+
+    .conversationGrid .message {
+        max-width: 80%;
+    }
+
 }

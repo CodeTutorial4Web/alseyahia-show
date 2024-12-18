@@ -9,7 +9,7 @@
 }
 
 .videosSection .blog__grid {
-    margin-top: 2rem;
+    margin-top: 4rem;
     gap: 3rem;
     padding-bottom: 3rem;
 }
@@ -81,12 +81,13 @@
     right: 2rem;
     top: 2rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: stretch;
     gap: 2rem;
+    width: calc(100% - 4rem);
 }
 
-.searchVideo a{
+.searchVideo a {
     background: var(--card-bg);
     padding: .5rem 1rem;
     color: var(--main-color);
@@ -131,7 +132,7 @@
 
 .searchVideo input:focus {
     border-color: var(--main-color);
-    
+
 }
 
 .searchVideo button {
@@ -154,14 +155,13 @@
         gap: 1rem;
     }
 
-.searchVideo a{
-    font-size: .7rem;
- }
+    .searchVideo a {
+        font-size: .7rem;
+    }
 
 
-.searchVideo input {
-    width: 25vw;
+    .searchVideo input {
+        width: 30vw;
+    }
+
 }
-
-}
-

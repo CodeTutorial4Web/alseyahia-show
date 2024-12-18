@@ -5,6 +5,7 @@ import UserAvatar from "../general/UserAvatar";
 import Picker from "@emoji-mart/react";
 import data from "@emoji-mart/data";
 import { useRef, useState } from "react";
+import SideNavbar from "../navbars/SideNavbar";
 
 export default function Conversation() {
   // message input
@@ -32,6 +33,8 @@ export default function Conversation() {
 
   return (
     <section className="conversationSection">
+
+      <SideNavbar />
       <div className="user">
         <UserAvatar scale={0.8} avatarImage={""} />
         <div className="userData">
@@ -86,38 +89,38 @@ export default function Conversation() {
       </div>
       <div className="createMessage">
         <form className="sendMessageForm" onSubmit={handleFormSubmit}>
-<div className="messageInput__picker">
+          <div className="messageInput__picker">
 
-<textarea
-            type="text"
-            ref={messageInp}
-            value={message}
-            onChange={(e) => {
-              setMessage(e.target.value);
-            }}
-            placeholder="Type your message..."
-          ></textarea>
-
-          <div className="emojiPicker">
-            <span
-              onClick={() => {
-                setShowPicker(!showPicker);
+            <textarea
+              type="text"
+              ref={messageInp}
+              value={message}
+              onChange={(e) => {
+                setMessage(e.target.value);
               }}
-            >
-              <BiSmile />
-            </span>
+              placeholder="Type your message..."
+            ></textarea>
 
-            {showPicker ? (
-              <div className={"show"}>
-                <Picker data={data} emojiSize={25} onEmojiSelect={typeEmoji} />
-              </div>
-            ) : (
-              ""
-            )}
+            <div className="emojiPicker">
+              <span
+                onClick={() => {
+                  setShowPicker(!showPicker);
+                }}
+              >
+                <BiSmile />
+              </span>
+
+              {showPicker ? (
+                <div className={"show"}>
+                  <Picker data={data} emojiSize={25} onEmojiSelect={typeEmoji} />
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
           </div>
-</div>
 
-        
+
 
           <button type="submit">
             <BiPaperPlane />

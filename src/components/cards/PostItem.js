@@ -94,7 +94,7 @@ export default function PostItem({
       </div>
 
       <div className="userData__date">
-        <Link className="postsGrid__item__userData">
+        <Link to="/profile/12" className="postsGrid__item__userData">
           <UserAvatar scale={1} avatarImage={""} />
 
           <div className="userName">

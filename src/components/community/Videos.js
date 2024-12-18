@@ -15,7 +15,7 @@ export default function Videos() {
     <section className="videosSection">
       <div className="searchVideo">
         <form onSubmit={handleFormSubmit}>
-          <input type="text" placeholder="search"/>
+          <input type="text" placeholder="search" />
           <button type="submit">
             <BiSearch />
           </button>
@@ -23,7 +23,6 @@ export default function Videos() {
 
         <Link to="/create-video" title="Create video"> <BiPlusCircle /> Create</Link>
       </div>
-      <Header text="Videos" />
       <div className="blog__grid">
         <VideoCard
           user={null}

@@ -23,7 +23,7 @@
 }
 
 
-.video__container:hover .controlls{
+.video__container:hover .controlls {
     transform: translateY(0);
 }
 
@@ -40,15 +40,13 @@
     width: 100%;
     padding: .5rem 1rem;
     transition: var(--medium-transition);
-    background: linear-gradient(
-        to top,
-        #000,
-        transparent 100%
-    );
+    background: linear-gradient(to top,
+            #000,
+            transparent 100%);
 }
 
 .videoDurationBar__container {
-    width: 100% ;
+    width: 100%;
     position: absolute;
     top: -1rem;
     left: 50%;
@@ -59,8 +57,9 @@
     width: 100%;
     outline: none;
     border-radius: none;
-    transition:  0.3s ;
-    color: var(--main-color);    height: 5px;
+    transition: 0.3s;
+    color: var(--main-color);
+    height: 5px;
 
 }
 
@@ -80,9 +79,10 @@
     align-items: center;
 }
 
-.controlls .rightSide__buttons  {
+.controlls .rightSide__buttons {
     gap: 1rem;
 }
+
 .controlls .btnController {
     background: none;
     border: none;
@@ -104,13 +104,13 @@
     margin-left: 1rem;
 }
 
-.controlls .videoVolume__container input{
+.controlls .videoVolume__container input {
     width: 0;
     opacity: 0;
     height: 5px;
 }
 
-.controlls .videoVolume__container:hover input{
+.controlls .videoVolume__container:hover input {
     width: 80px;
     opacity: 1;
 }
@@ -125,7 +125,7 @@
 }
 
 
-.controlls .speedContainer.show .dropDown{
+.controlls .speedContainer.show .dropDown {
     opacity: 1;
     display: inline-block;
 }
@@ -144,23 +144,23 @@
     display: none;
 }
 
-.dropDown.normal li:nth-child(3){
+.dropDown.normal li:nth-child(3) {
     background: #bbb;
 }
 
-.dropDown.speed1 li:nth-child(2){
+.dropDown.speed1 li:nth-child(2) {
     background: #bbb;
 }
 
-.dropDown.speed2 li:nth-child(1){
+.dropDown.speed2 li:nth-child(1) {
     background: #bbb;
 }
 
-.dropDown.slow1 li:nth-child(4){
+.dropDown.slow1 li:nth-child(4) {
     background: #bbb;
 }
 
-.dropDown.slow2 li:nth-child(5){
+.dropDown.slow2 li:nth-child(5) {
     background: #bbb;
 }
 
@@ -170,4 +170,14 @@
     width: 100%;
     padding: 0.1rem 1rem;
 
+}
+
+@media screen and (max-width: 600px) {
+    .time {
+        font-size: .7rem;
+    }
+
+    .controlls .videoVolume__container:hover input {
+        width: 50px;
+    }
 }

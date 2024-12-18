@@ -74,7 +74,7 @@
     outline: none;
     font-weight: 900;
     border: 1px solid transparent;
-
+    width: fit-content;
 }
 
 .profile-settings .displayname-desc .userDesc {
@@ -84,8 +84,9 @@
     border: 1px solid transparent;
     text-overflow: clip;
     word-break: break-all;
+    word-wrap: break-word;
     width: 100%;
-    height: 77px;
+    min-height: 77px;
     resize: none;
 }
 
@@ -146,6 +147,19 @@
     background: var(--card-bg);
     padding: .7rem 1rem;
     border-radius: .5rem;
+    position: relative;
+}
+
+.enablePrivateChat.show p {
+    display: inline-block;
+}
+
+.enablePrivateChat .infoBtn {
+    position: absolute;
+    top: .7rem;
+    right: 1rem;
+    color: var(--main-color);
+    cursor: pointer;
 }
 
 .enablePrivateChat-text {
@@ -161,6 +175,7 @@
     font-size: .8rem;
     color: var(--gray-color);
     width: 80%;
+    display: none;
 }
 
 
@@ -373,4 +388,37 @@
 
 .theme__box.theme3 .theme__box-colors .theme__box-color:nth-child(4) {
     background: var(--theme3-bg-color-2);
+}
+
+
+
+
+
+
+@media screen and (max-width :649px) {
+
+    .profile-settings .displayname-desc .displayname {
+        font-size: 1rem;
+
+    }
+
+    .themesContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-settings .saveBtn {
+        position: static;
+        margin-top: 1rem;
+        font-size: .8rem;
+    }
+
+
+    .enablePrivateChat .infoBtn {
+        position: static;
+
+    }
+
+    .enablePrivateChat-text h3 {
+        font-size: .8rem;
+    }
 }

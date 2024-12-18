@@ -9,8 +9,9 @@
 
 .shopSection .blog__grid {
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 4rem;
     gap: 3rem;
+    padding-bottom: 3rem;
 }
 
 .userPoints {
@@ -29,7 +30,7 @@
     position: absolute;
     top: 2rem;
     right: 2rem;
-    
+
     display: flex;
     justify-content: end;
     align-items: center;
@@ -37,7 +38,7 @@
 }
 
 .userCart {
- font-size: 2rem;
+    font-size: 2rem;
     position: relative;
 }
 
@@ -78,7 +79,7 @@
 }
 
 
-.shopSection .blog__grid .shopItem .menu{
+.shopSection .blog__grid .shopItem .menu {
     width: 100%;
     display: flex;
     justify-content: end;
@@ -160,7 +161,7 @@
 }
 
 
-.shopSection .blog__grid .shopItem .shopItem__image{
+.shopSection .blog__grid .shopItem .shopItem__image {
     min-height: 40vh;
     background-position: center;
     background-size: cover;
@@ -195,6 +196,6 @@
 }
 
 .shopSection .blog__grid .shopItem .shopItem__priceAddToCart button:hover {
-        color: rgb(108, 172, 255);
-    
+    color: rgb(108, 172, 255);
+
 }

@@ -76,7 +76,7 @@
 
 
 .ProfileSection .profile__data .user__data .user__data-username__points .userPoints p {
-    font-size: .8rem;
+    font-size: .7rem;
     font-weight: 500;
     color: var(--main-color);
     margin: 0;
@@ -219,4 +219,76 @@
 
 .certificate a {
     margin-top: 1rem;
+}
+
+
+
+@media screen and (max-width: 766px) {
+
+
+    .certificates {
+        grid-template-columns: 1fr;
+
+    }
+}
+
+
+@media screen and (max-width: 666px) {
+    .ProfileSection .profile__data .userAvatar__bg {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .ProfileSection .profile__data .userAvatar__bg .badges {
+        width: 100%;
+    }
+
+    .ProfileSection .profile__data .user__data .user__data-username__points .username h1 {
+        font-size: 2rem;
+    }
+
+    .ProfileSection .profile__data .user__data .user__data-username__points .userPoints {
+        font-size: .9rem;
+    }
+
+    .ProfileSection .profile__data .user__data .user__data-username__points .username span {
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+
+    .ProfileSection .profile__data .user__data .user__data-username__points .username h1 {
+        font-size: 1.5rem;
+    }
+
+    .ProfileSection .profile__data .user__data .user__data-username__points .userPoints {
+        font-size: .8rem;
+    }
+
+    .ProfileSection .profile__data .user__data .user__data-username__points .username span {
+        font-size: .9rem;
+    }
+
+    .ProfileSection .profile__data .user__data>p {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .ProfileSection .profile__data .user__data .user__data-username__points .userPoints {
+        font-size: .7rem;
+        padding: .3rem .5rem;
+
+    }
+
+    .ProfileSection {
+        padding: 1rem !important;
+    }
+
+    .tags .tag {
+        font-size: .6rem;
+        padding: .2rem .5rem;
+    }
 }

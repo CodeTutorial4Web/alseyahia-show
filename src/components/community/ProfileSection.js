@@ -60,8 +60,8 @@ export default function ProfileSection() {
 
 
                         <div className="username">
-                            <h1>Mostafa Ahmed  <span>(Prep. 2)</span></h1>
-                            <span>@mostafa_ahmed</span>
+                            <h1>Mostafa Ahmed  </h1>
+                            <span>@mostafa_ahmed <span>(Prep. 2)</span></span>
 
                         </div>
 

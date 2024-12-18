@@ -5,7 +5,6 @@ import {
   Navigate,
 } from "react-router-dom";
 import HomePage from "./pages/Home.page";
-import Footer from "./components/general/Footer";
 import TermsOfService from "./pages/TermsOfServiece.page";
 import Register from "./pages/Register.page";
 import Login from "./pages/Login.page";
@@ -21,7 +20,6 @@ import CreateVideo from "./pages/CreateVideo.page";
 import Conversation from "./components/community/Conversation";
 import VideoPreview from "./components/community/VideoSection";
 import ProfileSection from "./components/community/ProfileSection";
-import LoadingScreen from "./components/general/LoadingScreen";
 import ShopItemSection from './components/community/ShopItemSection';
 import SettingsSection from "./components/community/SettingsSection";
 
@@ -53,7 +51,6 @@ function App() {
           >
             <Route path="/videos" exact element={<Videos />} />
             <Route path="/" exact element={<DashboardSection />} />
-            <Route path="/conversation/:id" exact element={<Conversation />} />
             <Route path="/shop" exact element={<Shop />} />
             <Route path="/shop/:id" exact element={<ShopItemSection />} />
             <Route path="/settings" exact element={<SettingsSection />} />
@@ -94,6 +91,8 @@ function App() {
             exact
             element={user ? <Navigate to={"/"} /> : <Login />}
           />
+          <Route path="/conversation/:id" exact element={user ? <Conversation /> : <Login />} />
+
           <Route path="/terms-of-service" exact element={<TermsOfService />} />
         </Routes>
       </Router>

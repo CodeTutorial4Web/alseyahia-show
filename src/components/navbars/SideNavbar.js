@@ -6,6 +6,7 @@ import CommunityPreview from "../cards/CommunityPreview";
 import ConversationPreview from "../cards/ConversationPreview";
 import { FaBars } from "react-icons/fa";
 import { MdSettings } from "react-icons/md";
+import { BiSolidDashboard, BiSolidShoppingBag, BiSolidVideo } from "react-icons/bi";
 
 
 export default function SideNavbar() {
@@ -37,25 +38,35 @@ export default function SideNavbar() {
             <p>Mostafa Ahmed</p>
             <span>mostafa_ahmed</span>
           </div>
-
-          <Link to="/settings" className="settingsLink">
-            <MdSettings />
-
-          </Link>
         </div>
       </div>
 
       <div className="sideNavbarLinks">
+        <h4 className="navSubheadingLink">Main pages</h4>
+
         <div className="otherLinks">
           <Link className="navLink" to="/">
-            <div></div>
+            <i><BiSolidDashboard /></i>
             <span>Dashboard</span>
           </Link>
           <Link className="navLink" to="/videos">
-            <div></div>
+            <i><BiSolidVideo /></i>
+
             <span>Videos</span>
           </Link>
 
+          <Link className="navLink" to="/settings">
+            <i><MdSettings /></i>
+
+            <span>Settings</span>
+          </Link>
+
+
+          <Link className="navLink" to="/shop">
+            <i><BiSolidShoppingBag /></i>
+
+            <span>Shop</span>
+          </Link>
         </div>
 
         <h4 className="navSubheadingLink">Communities</h4>
