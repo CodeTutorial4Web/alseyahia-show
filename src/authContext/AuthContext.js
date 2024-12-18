@@ -11,7 +11,7 @@ const INITIAL_STATE = {
     user:
       JSON.parse(sessionStorage.getItem("userData")) == null
         ?
-        null
+        { user: "Mostafa" }
         : JSON.parse(sessionStorage.getItem("userData")).user,
   },
   isFetching: false,
