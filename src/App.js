@@ -47,7 +47,7 @@ function App() {
         <Routes>
 
           <Route
-            path="/alseyahia-show"
+            path="/"
             exact
             element={user ? <CommunityPage /> : <HomePage />}
           >
