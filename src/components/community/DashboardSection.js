@@ -1,10 +1,23 @@
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
 import { Bar } from "react-chartjs-2";
+
 import { BiArrowToRight, BiBell } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
 import "../.././assets/css/dashboard.css"
 
 export default function DashboardSection() {
+
+  ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+
   return (
     <section className="dashboardSection">
       <div className="communityActivityData">
@@ -80,7 +93,6 @@ export default function DashboardSection() {
                   backgroundColor: "#4772fd21",
                   borderRadius: "12px",
                   borderWidth: 1,
-
                   borderColor: "#4772fd",
 
                 },
