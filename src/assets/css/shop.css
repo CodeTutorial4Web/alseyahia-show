@@ -199,3 +199,17 @@
     color: rgb(108, 172, 255);
 
 }
+
+
+@media screen and (max-width: 650px) {
+
+    .shopSection {
+        padding: 2rem 0;
+
+    }
+
+    .shopSection .blog__grid .shopItem {
+        border-radius: 0;
+    }
+
+}

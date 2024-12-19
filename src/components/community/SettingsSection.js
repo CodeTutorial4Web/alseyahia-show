@@ -130,7 +130,7 @@ export default function SettingsSection() {
 
 
 
-            <div className={showInfo ? "enablePrivateChat show" : "enablePrivateChat"} >
+            <div className={"enablePrivateChat"} >
 
                 <div className="enablePrivateChat-text">
                     <h3>Enable private chats with students.</h3>
@@ -154,9 +154,6 @@ export default function SettingsSection() {
                     }} type="checkbox" id="privateChat" />
                 </div>
 
-                <i className="infoBtn" onClick={() => {
-                    setShowInfo(!showInfo);
-                }}><BiSolidInfoCircle /></i>
             </div>
 
 

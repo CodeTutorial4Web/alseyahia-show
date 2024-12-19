@@ -150,9 +150,6 @@
     position: relative;
 }
 
-.enablePrivateChat.show p {
-    display: inline-block;
-}
 
 .enablePrivateChat .infoBtn {
     position: absolute;
@@ -175,7 +172,6 @@
     font-size: .8rem;
     color: var(--gray-color);
     width: 80%;
-    display: none;
 }
 
 
@@ -395,11 +391,23 @@
 
 
 
-@media screen and (max-width :649px) {
+@media screen and (max-width:649px) {
+    .profile-settings {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .profile-settings .userAvatar {
+        justify-content: center;
+    }
 
     .profile-settings .displayname-desc .displayname {
         font-size: 1rem;
 
+    }
+
+    .profile-settings .displayname-desc .userDesc {
+        font-size: .7rem;
     }
 
     .themesContainer {

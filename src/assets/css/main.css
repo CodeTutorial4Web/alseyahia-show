@@ -417,6 +417,6 @@ footer button:hover {
 
 @media screen and (max-width: 768px) {
     .p-inline {
-        padding: 0 2rem;
+        padding: 1rem;
     }
 }

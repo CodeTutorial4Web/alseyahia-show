@@ -159,9 +159,19 @@
         font-size: .7rem;
     }
 
+    .videosSection {
+        padding: 2rem 1rem;
+
+    }
 
     .searchVideo input {
         width: 30vw;
+    }
+
+    .searchVideo {
+        width: calc(100% - 2rem);
+        right: 1rem;
+
     }
 
 }

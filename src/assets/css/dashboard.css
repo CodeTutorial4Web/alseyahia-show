@@ -13,15 +13,24 @@
 }
 
 .dashboardSection .communityActivityData {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    display: flex;
+    justify-content: center;
     grid-column: 1 / 5;
 }
 
 .dashboardSection .communityActivityData .communityActivityData__item {
-    border-right: 1px solid var(--thumb-bg);
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
 }
+
+.dashboardSection .communityActivityData .communityActivityData__item .communityActivityData__item__title {
+    width: 100%;
+    text-align: start;
+}
+
 
 .dashboardSection .communityActivityData .communityActivityData__item:nth-last-child(1) {
     border: none;
@@ -47,7 +56,7 @@
     font-size: 5rem;
 }
 
-.dashboardSection .videosWatched b span {
+.dashboardSection .videosWatched span {
     font-size: .7rem;
     font-weight: 500;
 }
@@ -165,12 +174,13 @@
 
 @media screen and (max-width: 936px) {
 
-    .communityActivityData__item b,
-    .dashboardSection .videosWatched b,
-    .dashboardSection .notifications b,
-    .dashboardSection .badges b {
 
-        font-size: 3rem;
+    .dashboardSection .communityActivityData .communityActivityData__item__title,
+    .dashboardSection .videosWatched .videosWatched__title,
+    .dashboardSection .notifications .notifications__title,
+    .dashboardSection .badges .badges__title,
+    .dashboardSection .pointsLeaderboard .pointsLeaderboard__title {
+        font-size: .8rem;
     }
 
     .dashboardSection {
@@ -201,6 +211,55 @@
         grid-column: 1 / 3;
 
 
+    }
+
+    .dashboardSection {
+        padding: 2rem 1rem;
+
+    }
+
+}
+
+
+@media screen and (max-width: 693px) {
+
+
+    .communityActivityData__item b,
+    .dashboardSection .videosWatched b,
+    .dashboardSection .notifications b,
+    .dashboardSection .badges b {
+
+        font-size: 3rem;
+    }
+
+
+
+    .dashboardSection .communityActivityData .communityActivityData__item__title,
+    .dashboardSection .videosWatched .videosWatched__title,
+    .dashboardSection .notifications .notifications__title,
+    .dashboardSection .badges .badges__title,
+    .dashboardSection .pointsLeaderboard .pointsLeaderboard__title {
+        font-size: .8rem;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+
+    .communityActivityData__item b,
+    .dashboardSection .videosWatched b,
+    .dashboardSection .notifications b,
+    .dashboardSection .badges b {
+
+        font-size: 2rem;
+    }
+
+    .dashboardSection .communityActivityData .communityActivityData__item__title,
+    .dashboardSection .videosWatched .videosWatched__title,
+    .dashboardSection .notifications .notifications__title,
+    .dashboardSection .badges .badges__title,
+    .dashboardSection .pointsLeaderboard .pointsLeaderboard__title {
+        font-size: .7rem;
     }
 
 }

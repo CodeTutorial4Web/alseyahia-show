@@ -32,14 +32,14 @@ export default function DashboardSection() {
           <b>20</b>
         </div>
         <div className="communityActivityData__item">
-          <p className="communityActivityData__item__title">Posts published</p>
+          <p className="communityActivityData__item__title">Posts</p>
 
           <b>14</b>
         </div>
       </div>
       <div className="videosWatched">
         <p className="videosWatched__title">Videos watched</p>
-        <b>5 <span>4 quizzes solved</span></b>
+        <b>5</b>  <span>4 quizzes solved</span>
       </div>
       <Link to={"/notifications"} className="notifications">
 
