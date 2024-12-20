@@ -31,14 +31,14 @@ export default function SideNavbar() {
           <FaBars />
         </button>
 
-        <div className="user">
+        <Link to="/profile/12" className="user">
           <UserAvatar scale={1} avatarImage={null} />
 
           <div className="sideNavbar__userData__name">
             <p>Mostafa Ahmed</p>
             <span>mostafa_ahmed</span>
           </div>
-        </div>
+        </Link>
       </div>
 
       <div className="sideNavbarLinks">

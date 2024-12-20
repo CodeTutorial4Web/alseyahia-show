@@ -46,29 +46,29 @@
     list-style: none;
 }
 
-.conversationSection .user p {
+.conversationSection>.user p {
     font-weight: 700;
     line-height: .9rem;
     font-size: 1rem;
 }
 
-.conversationSection .user span {
+.conversationSection>.user span {
     font-size: .7rem;
 }
 
-.conversationSection .user b {
+.conversationSection>.user b {
     font-size: .7rem;
 }
 
-.conversationSection .user b.online {
+.conversationSection>.user b.online {
     color: rgb(0, 173, 0);
 }
 
-.conversationSection .user b.offline {
+.conversationSection>.user b.offline {
     color: rgb(222, 46, 46);
 }
 
-.conversationSection .user .userData {
+.conversationSection>.user .userData {
     display: flex;
     flex-direction: column;
 }
